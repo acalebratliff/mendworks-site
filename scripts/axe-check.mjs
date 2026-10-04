@@ -8,7 +8,7 @@ import puppeteer from "puppeteer";
 const require = createRequire(import.meta.url);
 const axeSource = readFileSync(require.resolve("axe-core/axe.min.js"), "utf8");
 const base = process.env.BASE_URL ?? "http://localhost:8080";
-const paths = ["/", "/shipped/", "/shipped/dot-studio/", "/contributions/", "/kill-log/", "/how-we-work/", "/contact/", "/404.html"];
+const paths = ["/", "/shipped/", "/shipped/dot-studio/", "/contributions/", "/what-we-didnt-build/", "/how-we-work/", "/contact/", "/404.html"];
 const tags = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa", "best-practice"];
 
 const browser = await puppeteer.launch({

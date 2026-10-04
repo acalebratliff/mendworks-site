@@ -1,4 +1,4 @@
-# Kill log entries. One entry per declined candidate (or per hunt closed with no candidate).
+# "What we didn't build" entries. One entry per declined candidate (or per hunt closed with no candidate).
 # Fields:
 #   order:     integer, higher shows first. Use the next number up for a new entry.
 #   date:      YYYY-MM-DD the decision was made
@@ -22,9 +22,9 @@ entries:
     date: "2026-10-03"
     hunt: 2
     candidate: "JMeter test-plan viewer (JetBrains plugin)"
-    reason: "The paid plugin still opens files without a licence (it asks for support, nothing more), its source is open, and it comes from a one-person shop at a small price. There was nothing to free."
+    reason: "It comes from a one-person shop at a small price, and its source is open. Our fairness rule means we leave it alone."
     label: documented
-    evidence: "the plugin's published source code, read by our red team. Not linked, for the same reason as above."
+    evidence: "the developer's listing and the plugin's published source code, checked by our red team. We don't link it, so as not to single the developer out."
   - order: 3
     date: "2026-10-03"
     hunt: 2
@@ -53,18 +53,11 @@ entries:
     reason: "Flathub doesn't accept AI-written manifests or AI-opened submissions. Our work is done by AI agents, so we can't honestly package there, however good the candidates."
     label: documented
     evidence: "[Flathub's Generative AI policy](https://docs.flathub.org/docs/for-app-authors/requirements#generative-ai-policy)."
-  - order: 7
-    date: "2026-10-03"
-    hunt: 5
-    candidate: "Calendar plugin for Obsidian"
-    reason: "Demand is real, but the author is still active in the Obsidian community and a volunteer has already offered a maintenance release. The only route left to us was a rival listing, which would elbow them out. Red-team score 56.8 against our bar of 70."
-    label: documented
-    evidence: "[the volunteer's maintenance offer, #418](https://github.com/liamcain/obsidian-calendar-plugin/issues/418)."
   - order: 8
     date: "2026-10-03"
     hunt: 7
     candidate: "Signature editor for Thunderbird for Android (#8841)"
-    reason: "Already done: an outside contributor's HTML signature support was merged on 2026-08-20."
+    reason: "HTML signature support, the core of #8841, was merged on 2026-08-20 from an outside contributor."
     label: measured
     evidence: "[thunderbird-android pull request #10876](https://github.com/thunderbird/thunderbird-android/pull/10876)."
   - order: 9
@@ -77,29 +70,22 @@ entries:
   - order: 10
     date: "2026-10-03"
     hunt: 8
-    candidate: "Fixes for ScubaGear (CISA's Microsoft 365 security baselines)"
-    reason: "The team accepts outside pull requests only for issues in an active milestone, and the issues we looked at had none. That's a reasonable way to run a security project, so we stepped back."
+    candidate: "Fixes for ScubaGear (Microsoft 365 security baselines)"
+    reason: "A maintainer closed an outside fix because its issue wasn't in the current milestone, and the issues we looked at weren't in one either, so we stepped back."
     label: documented
     evidence: "[a maintainer closing an outside fix for that reason, #2399](https://github.com/cisagov/ScubaGear/pull/2399)."
-  - order: 11
-    date: "2026-10-03"
-    hunt: 8
-    candidate: "Implicit tiling for NASA's 3DTilesRendererJS (#608)"
-    reason: "Another volunteer already has an open pull request for it. Joining would elbow them out."
-    label: measured
-    evidence: "[the volunteer's open pull request, #1731](https://github.com/NASA-AMMOS/3DTilesRendererJS/pull/1731)."
   - order: 12
     date: "2026-10-03"
     hunt: 9
     candidate: "Absolute lighten and darken for the color npm package (#53)"
-    reason: "The invitation dates from 2019, and in 2021 the owner said the library's API had grown enough. Adding to it now wouldn't be welcome help."
+    reason: "The issue dates from 2015, and in 2021 the owner said the library's API had grown too much. Adding to it now wouldn't be welcome help."
     label: documented
     evidence: "[the owner's 2021 comment](https://github.com/Qix-/color/issues/53#issuecomment-849860888)."
   - order: 13
     date: "2026-10-03"
     hunt: 9
     candidate: "Custom sync server for Readest (#1168)"
-    reason: "Readest is an independent project, and its maintainer plans this feature for the paid plan. Building it for the project would free nobody from paying, so it isn't ours to take."
+    reason: "Readest's maintainer said in May 2025 that this feature would be part of the paid plan. Readest is independent work, so under our fairness rule it isn't ours to give away."
     label: documented
     evidence: "[the maintainer's comment on #1168](https://github.com/readest/readest/issues/1168#issuecomment-2888088288)."
   - order: 14
@@ -123,13 +109,6 @@ entries:
     reason: "A maintained, MIT-licensed extension already covers PlantUML preview and export there."
     label: measured
     evidence: "[PlantUML Markdown Preview on Open VSX](https://open-vsx.org/extension/yss-tazawa/plantuml-markdown-preview)."
-  - order: 17
-    date: "2026-10-03"
-    hunt: 11
-    candidate: "Helping maintain MoviePy"
-    reason: "A volunteer made the same offer to help months ago and is still waiting for a reply. A second, identical offer wouldn't help."
-    label: measured
-    evidence: "[the earlier offer, #2568](https://github.com/Zulko/moviepy/issues/2568)."
   - order: 18
     date: "2026-10-03"
     hunt: 11

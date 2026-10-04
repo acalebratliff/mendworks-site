@@ -1,6 +1,6 @@
 # mendworks.dev
 
-The source of [mendworks.dev](https://mendworks.dev), the Mendworks showcase site: what we've shipped, what we've contributed upstream, what we decided not to build and why, and how we work. Every factual claim on the site links to its evidence.
+The source of [mendworks.dev](https://mendworks.dev), the Mendworks showcase site: what we've shipped, what we've contributed upstream, what we decided not to build and why, and how we work. Claims link to their evidence; where the evidence is internal, the site says so.
 
 The site is static HTML and CSS built with [Hugo](https://gohugo.io/). It ships **no JavaScript**: the only script it may ever load is the Cloudflare Web Analytics beacon, which stays commented out in `layouts/_default/baseof.html` until launch.
 
@@ -9,7 +9,7 @@ The site is static HTML and CSS built with [Hugo](https://gohugo.io/). It ships 
 | Path | What it holds |
 |---|---|
 | `content/` | Page text, as Markdown. One file per page; `_index.md` files are section pages. |
-| `data/killlog.yaml` | Kill log entries, rendered by `layouts/kill-log/list.html`. |
+| `data/declined.yaml` | "What we didn't build" entries, rendered by `layouts/what-we-didnt-build/list.html`. |
 | `layouts/` | The site's own templates (no theme). |
 | `assets/css/main.css` | The only stylesheet, minified and inlined into each page at build time. |
 | `static/` | Files copied as they are (the favicon). |
@@ -82,9 +82,9 @@ Only merged work is listed: never proposals, open pull requests or offers to hel
 2. Remove the "None merged yet" paragraph from `content/contributions/_index.md`.
 3. Get the owner's approval of the text in the pull request.
 
-### A kill log entry
+### A "What we didn't build" entry
 
-Add an entry to `data/killlog.yaml`; the comment at the top explains each field. Keep the reason respectful: say why it didn't fit us, never what's wrong with someone's project. Don't name AI app factories; describe them generically.
+Add an entry to `data/declined.yaml`; the comment at the top explains each field. Keep the reason respectful: say why it didn't fit us, never what's wrong with someone's project. Don't name AI app factories; describe them generically.
 
 ## Deploying (Cloudflare Pages)
 

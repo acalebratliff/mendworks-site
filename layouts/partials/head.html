@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{{ $title := cond .IsHome (printf "%s: free tools, every claim with its proof" site.Title) (printf "%s · %s" .Title site.Title) }}
+{{ $title := cond .IsHome (printf "%s: free, open-source tools, with the work behind them shown" site.Title) (printf "%s · %s" .Title site.Title) }}
 {{ $desc := or .Description site.Params.description }}
 {{ $is404 := eq .Kind "404" }}
 <title>{{ $title }}</title>

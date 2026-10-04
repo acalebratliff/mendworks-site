@@ -7,7 +7,7 @@ description: "How Mendworks works: coding standards, independent review, verify 
 
 ## Who does the work
 
-The work is done by a team of AI agents with defined roles: engineers, a build and release engineer, QA, an independent code reviewer, a market analyst and a red team that tries to talk us out of each idea. An AI engineering lead plans the work and brings decisions to **A. Caleb Ratliff**, the accountable human, who decides and merges.
+The work is done by AI agents for building, release, QA, code review, market research and a red team that tries to talk us out of each idea. Each agent is a separate session of one of Anthropic's Claude models (we use more than one), given its own role and its own instructions. An AI engineering lead, another Claude session, plans the work and brings decisions to **A. Caleb Ratliff**, the accountable human, who decides and merges.
 
 ## Coding standards
 
@@ -15,8 +15,10 @@ Each project has written coding standards, and every rule in them is something a
 
 ## Independent review
 
-- **An author never reviews its own change.** Every change goes through a pull request, an independent code reviewer and green CI.
-- **QA is independent too.** The QA engineer didn't build what they test, and tests the exact file we release. For DOT Studio that meant the oldest and newest IDE versions we support; JetBrains Plugin Verifier checks compatibility with the builds in between.
+"Independent" here means a separate agent session that didn't write the work. It doesn't mean a different family of AI or a person. Claude sessions can share blind spots, which is one reason we publish our limitations and our targets.
+
+- **An author never reviews its own change.** Every change goes through a pull request, a review agent that didn't write it, and green CI.
+- **QA is separate too.** The QA agent didn't build what it tests, and it tests the exact file we release. For DOT Studio that meant the oldest and newest IDE versions we support; JetBrains Plugin Verifier checks compatibility with the builds in between.
 - **A human merges.** A. Caleb Ratliff merges, and only once the engineering lead says the change is ready.
 
 ## Verify, then claim
@@ -24,23 +26,23 @@ Each project has written coding standards, and every rule in them is something a
 - **Listings say only what's been tested.** Before DOT Studio was submitted, QA checked each claim in the store description against the build, and the release page names what QA didn't cover.
 - **Platform bugs are proven before we blame the platform.** DOT Studio's 2025.2 uninstall limitation was accepted only after a heap analysis showed every leaking path ran through the platform's own code ([coding standards, section 1.4](https://github.com/acalebratliff/dot-studio/blob/main/CODING-STANDARDS.md#14-dynamic-plugin-install-update-uninstall-without-restart)).
 - **Targets come before results.** We publish the numbers that decide whether a project continues before it launches (see [DOT Studio's launch targets](/shipped/dot-studio/#launch-targets-set-before-launch)).
-- **Evidence is labelled.** Research findings are marked as measured, documented or inferred, as in the [kill log](/kill-log/).
+- **Evidence is labelled.** Research findings are marked as measured, documented or inferred, as on [What we didn't build](/what-we-didnt-build/).
 
 ## How we choose what to build
 
-A candidate has to pass every test: people pay unfairly for it or lost it; the lock-in belongs to a big vendor or a dead product; demand is measured, not guessed; the current option is weak; we can replace it cleanly under a compatible licence; it can reach people in a store where they look; and it costs about nothing to run. Then an independent red team tries to kill it. Most candidates don't survive, and the [kill log](/kill-log/) shows why.
+A candidate has to pass every test: people pay unfairly for it or lost it; the lock-in belongs to a big vendor or a dead product; demand is measured, not guessed; the current option is weak; we can replace it cleanly under a compatible licence; it can reach people in a store where they look; and it costs about nothing to run. Then a red-team agent tries to talk us out of it. Most candidates don't survive, and [What we didn't build](/what-we-didnt-build/) shows why.
 
 ## The fairness rule
 
 **We never undercut a solo or independent developer charging a fair price.** In A. Caleb Ratliff's words: "We're not here to undercut some other solo dev who is trying to make an honest living or further their hobby."
 
-We also don't elbow out volunteers: if someone is already doing the work, we step back. And if we ever host something that costs money to run, we'll charge what it costs, publish that cost and add no markup.
+We also don't compete with volunteers: if someone is already doing the work, we step back. And if we ever host something that costs money to run, we'll charge what it costs, publish that cost and add no markup.
 
 ## AI disclosure
 
 - **Our code, tests, research and the text of this site are written by AI agents** (Anthropic's Claude models), and approved by A. Caleb Ratliff before anything is published.
 - **When we contribute to someone else's project, we say how AI was used,** in the pull request itself.
-- **We follow each project's and each store's rules on AI.** Where AI-made work isn't welcome, we don't send it. Flathub is one example, in the [kill log](/kill-log/).
+- **We follow each project's and each store's rules on AI.** Where AI-made work isn't welcome, we don't send it. Flathub is one example, on [What we didn't build](/what-we-didnt-build/).
 
 ## Report a problem
 
