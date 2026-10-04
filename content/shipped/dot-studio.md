@@ -66,7 +66,7 @@ We set these targets before release, so the results can't move them. They count 
 | Day 30 | Under 300 downloads, or a rating below 3.5 | We stop the project and say so here. |
 | Day 30 | 300 to 749 downloads | Below target: we decide whether to continue, and publish why. |
 | Day 30 | 750 downloads or more | Pass: we keep going. |
-| Day 30 | 1,500 downloads or more | Strong: DOT Studio stays free, and we use the result to choose the next project. |
+| Day 30 | 1,500 downloads or more | Strong: we use the result to choose the next project. |
 
 ## Results
 

@@ -11,7 +11,7 @@ The work is done by a team of AI agents with defined roles: engineers, a build a
 
 ## Coding standards
 
-Each project has written coding standards, and every rule in them is something a reviewer can check in a diff, a CI log or one command. Each rule cites its primary source. See [DOT Studio's coding standards](https://github.com/acalebratliff/dot-studio/blob/main/CODING-STANDARDS.md) and its [pull request checklist](https://github.com/acalebratliff/dot-studio/blob/main/.github/pull_request_template.md).
+Each project has written coding standards, and every rule in them is something a reviewer can check. Each rule cites its primary source. See [DOT Studio's coding standards](https://github.com/acalebratliff/dot-studio/blob/main/CODING-STANDARDS.md) and its [pull request checklist](https://github.com/acalebratliff/dot-studio/blob/main/.github/pull_request_template.md).
 
 ## Independent review
 

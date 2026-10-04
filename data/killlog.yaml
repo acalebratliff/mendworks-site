@@ -99,7 +99,7 @@ entries:
     date: "2026-10-03"
     hunt: 9
     candidate: "Custom sync server for Readest (#1168)"
-    reason: "Readest is an independent project, and its maintainer plans this feature for the paid plan. Building it for him would free nobody from paying, so it isn't ours to take."
+    reason: "Readest is an independent project, and its maintainer plans this feature for the paid plan. Building it for the project would free nobody from paying, so it isn't ours to take."
     label: documented
     evidence: "[the maintainer's comment on #1168](https://github.com/readest/readest/issues/1168#issuecomment-2888088288)."
   - order: 14
