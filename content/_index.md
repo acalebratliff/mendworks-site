@@ -22,5 +22,5 @@ Most free-alternative sites show a grid of apps. We show the evidence behind eac
 
 - [Shipped](/shipped/): our releases, each with its QA verdict, known limitations and the success targets we set before launch.
 - [Contributions](/contributions/): fixes we've had merged into other people's free software.
-- [Kill log](/kill-log/): the candidates that reached our shortlist or red team and were declined, and the hunts we closed, with the reason and the evidence.
+- [Kill log](/kill-log/): the candidates that reached our red team and were declined, and the hunts we closed, with the reason and the evidence.
 - [How we work](/how-we-work/): our standards, and how to report a problem.

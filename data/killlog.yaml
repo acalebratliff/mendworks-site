@@ -134,6 +134,6 @@ entries:
     date: "2026-10-03"
     hunt: 11
     candidate: "Fixes for oxidized (network configuration backup)"
-    reason: "Oxidized is kept going by a few volunteers, who ask contributors to understand, test and stand behind every change. We don't run oxidized ourselves, so we couldn't stand behind fixes the way they ask, and stepped back."
+    reason: "Oxidized's maintainers ask contributors to understand, test and stand behind every change. We don't run oxidized ourselves, so we couldn't stand behind fixes the way they ask, and stepped back."
     label: documented
     evidence: "[oxidized's guidance on AI coding agents](https://github.com/ytti/oxidized/blob/master/CONTRIBUTING.md#using-ai-coding-agents)."

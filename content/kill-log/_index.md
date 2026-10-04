@@ -1,15 +1,15 @@
 ---
 title: "Kill log"
 kicker: "What we didn't build"
-lede: "The candidates that reached our shortlist or red team and were declined, and the hunts we closed, with the reason, the date and how we know."
+lede: "The candidates that reached our red team and were declined, and the hunts we closed, with the reason, the date and how we know."
 description: "Mendworks candidates declined after a closer look, and hunts closed, with one line of why, the date and an evidence label."
 ---
 
 Most ideas don't survive a careful look, and that's the point of looking. Before we build anything, we check whether a free tool already does the job, whether someone is already working on it, and whether building it would be fair to the people who make it now. The reasons below are about fit, not fault: every project here is someone's honest work.
 
-Each hunt starts with a broad screen, and most candidates fall at that first step. This log lists only the candidates that reached our shortlist or red team and were then declined, plus hunts we closed without a candidate. Candidates still held or watched, and work in progress, are not listed.
+Each hunt starts with a broad screen, and most candidates fall at that first step. This log lists only the candidates that reached our red team and were then declined, plus hunts we closed without a candidate. Candidates still held or watched, and work in progress, are not listed.
 
-| Hunt | Passed the first screen | Shortlisted or red-teamed |
+| Hunt | Passed the first screen | Red-teamed |
 |---|---|---|
 | 2 | not recorded as one number | 7 |
 | 3 | 7 of 43 | none (hunt closed) |
