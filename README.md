@@ -14,7 +14,6 @@ The site is static HTML and CSS built with [Hugo](https://gohugo.io/). It ships 
 | `assets/css/main.css` | The only stylesheet, minified and inlined into each page at build time. |
 | `static/` | Files copied as they are (the favicon). |
 | `hugo.toml` | Site configuration and the main menu. |
-| `CONTENT-REVIEW.md` | Sign-off list: each page's text needs Aaron's approval before launch. |
 
 ## Build and preview locally
 
@@ -30,10 +29,11 @@ hugo --minify      # build into public/
 CI (`.github/workflows/ci.yml`, GitHub Actions on `ubuntu-latest`) builds the site with Hugo 0.147.0 extended, then checks `public/`:
 
 1. **No JavaScript:** no `<script>` element, inline event handler or `.js` file.
-2. **Links:** [lychee](https://github.com/lycheeverse/lychee), configured in `lychee.toml`.
+2. **Links and anchors:** [lychee](https://github.com/lycheeverse/lychee), configured in `lychee.toml`.
 3. **HTML validity:** [html-validate](https://html-validate.org/), configured in `.htmlvalidate.json`.
 4. **Accessibility:** [pa11y-ci](https://github.com/pa11y/pa11y-ci) with the axe and HTML_CodeSniffer runners at WCAG 2 AA, configured in `.pa11yci.json`.
-5. **Lighthouse budgets:** [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci), at least 95 in performance, accessibility, best practices and SEO on every page (median of 3 runs), configured in `lighthouserc.json`.
+5. **WCAG 2.2 AA in both themes:** `scripts/axe-check.mjs` runs [axe-core](https://github.com/dequelabs/axe-core) with the WCAG 2.0, 2.1 and 2.2 A/AA rules on every page, in light and dark colour schemes. Any violation or needs-review result fails.
+6. **Lighthouse budgets:** [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci), at least 95 in performance, accessibility, best practices and SEO on every page (median of 3 runs), configured in `lighthouserc.json`.
 
 To run them locally (needs Node 24 and Google Chrome at `/usr/bin/google-chrome`):
 
@@ -43,6 +43,7 @@ PUPPETEER_SKIP_DOWNLOAD=true npm ci
 npm run validate
 python3 -m http.server 8080 --directory public &   # for pa11y-ci
 npm run a11y
+npm run axe
 CHROME_PATH=/usr/bin/google-chrome npm run lighthouse
 lychee --config lychee.toml 'public/**/*.html'
 ```
@@ -51,14 +52,14 @@ lychee --config lychee.toml 'public/**/*.html'
 
 ## Adding content
 
-Every change goes in through a feature branch and a pull request, and the new text needs Aaron's approval before it merges. Every factual claim needs a link to its evidence.
+Every change goes in through a feature branch and a pull request, and the new text needs the owner's approval, given in the pull request, before it merges. Every factual claim needs a link to its evidence.
 
 ### A release
 
 1. Copy `content/shipped/dot-studio.md` to `content/shipped/<project>.md` and rewrite it. Keep the sections: Status (with the store link), What it does, Versions tested, QA verdict, Known limitations, Launch targets (published **before** launch), Results, Licence and source.
 2. Set `status` in the front matter; the Shipped page lists it.
 3. When day-14 and day-30 numbers come in, add them under Results, with a link to where they came from, whether the target was hit or missed.
-4. Add the page to `CONTENT-REVIEW.md`.
+4. Get the owner's approval of the text in the pull request.
 
 ### A merged contribution
 
@@ -79,7 +80,7 @@ Only merged work is listed: never proposals, open pull requests or offers to hel
    ```
 
 2. Remove the "None merged yet" paragraph from `content/contributions/_index.md`.
-3. Add the page to `CONTENT-REVIEW.md`.
+3. Get the owner's approval of the text in the pull request.
 
 ### A kill log entry
 
@@ -87,15 +88,16 @@ Add an entry to `data/killlog.yaml`; the comment at the top explains each field.
 
 ## Deploying (Cloudflare Pages)
 
-Aaron sets this up himself, in the Cloudflare dashboard, when the text is approved:
+The owner sets this up in the Cloudflare dashboard once the text is approved. No one else performs account actions.
 
 - **Framework preset:** Hugo
 - **Build command:** `hugo --minify`
 - **Build output directory:** `public`
 - **Environment variable:** `HUGO_VERSION` = `0.147.0`
 - **Production branch:** `main`
+- **Preview deployments: None.** In Settings › Builds & deployments › Preview branch control, set preview branches to *None*, so only `main` deploys. By default Pages publishes every other branch to a public `*.pages.dev` URL, which would make unapproved draft text public. (If previews are ever wanted, protect them with Cloudflare Access first.)
 
-Then add `mendworks.dev` as the custom domain. If Cloudflare Web Analytics is enabled, put its site token into the commented-out beacon in `layouts/_default/baseof.html`, uncomment it, and allow that one script in the CI "no JavaScript" step, in its own pull request.
+Then add `mendworks.dev` as the custom domain. If Cloudflare Web Analytics is enabled, put its site token into the commented-out beacon in `layouts/_default/baseof.html`, uncomment it, and allow that one script in the CI "no JavaScript" step, in its own pull request. Don't use the Pages one-click Web Analytics toggle: it injects the beacon at Cloudflare's edge, bypassing the CI "no JavaScript" check and code review.
 
 ## Licence
 

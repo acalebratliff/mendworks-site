@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: ["**"]
+    branches: [main]
   pull_request:
     branches: [main]
 
@@ -72,6 +72,9 @@ jobs:
           python3 -m http.server 8080 --directory public >/dev/null 2>&1 &
           sleep 2
           npm run a11y
+
+      - name: Accessibility (axe, WCAG 2.2 AA, light and dark)
+        run: npm run axe
 
       - name: Lighthouse CI (all categories at least 95)
         run: npm run lighthouse

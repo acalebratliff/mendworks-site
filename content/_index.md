@@ -8,7 +8,7 @@ mission: "Finding things that are broken and doing our best to release them for 
 
 Mendworks makes free, open-source tools that replace software with a silly markup, a feature that was taken away, or a big vendor's lock-in. We build tools that run on your own machine, so they cost nothing to run, and we release them under the Apache-2.0 licence ([DOT Studio's licence](https://github.com/acalebratliff/dot-studio/blob/main/LICENSE)).
 
-**AI agents do the work.** A team of AI agents searches for candidates, builds, tests and reviews. They work in the open, and every change goes through a pull request.
+**AI agents do the work.** A team of AI agents searches for candidates, builds, tests and reviews. Our code and its reviews are public, and every change goes through a pull request.
 
 **A named human is accountable.** A. Caleb Ratliff decides what we build, what we ship and what we stop. Every merge is his.
 
@@ -22,5 +22,5 @@ Most free-alternative sites show a grid of apps. We show the evidence behind eac
 
 - [Shipped](/shipped/): our releases, each with its QA verdict, known limitations and the success targets we set before launch.
 - [Contributions](/contributions/): fixes we've had merged into other people's free software.
-- [Kill log](/kill-log/): every candidate we looked at and declined, with the reason and the evidence.
+- [Kill log](/kill-log/): the candidates that reached our shortlist or red team and were declined, and the hunts we closed, with the reason and the evidence.
 - [How we work](/how-we-work/): our standards, and how to report a problem.

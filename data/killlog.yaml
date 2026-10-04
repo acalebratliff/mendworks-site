@@ -43,9 +43,9 @@ entries:
     date: "2026-10-03"
     hunt: 3
     candidate: "Whole hunt: shutdown rescues and hardware freed from the cloud"
-    reason: "We screened 43 candidates and none met all seven of our tests. The big rescues were already served by community projects; what remained had small user bases and no store where newcomers find them."
+    reason: "We screened 43 candidates and none met all seven of our tests. What remained had small user bases and no store where newcomers find them."
     label: measured
-    evidence: "our candidate list and install counts from Home Assistant analytics, 2026-10-03."
+    evidence: "our internal candidate list, and install counts from Home Assistant analytics, 2026-10-03."
   - order: 6
     date: "2026-10-03"
     hunt: 4
@@ -106,7 +106,7 @@ entries:
     date: "2026-10-03"
     hunt: 10
     candidate: "A maintained Code Runner for Open VSX"
-    reason: "The owner is still active, and AI app factories had published look-alike copies in the days before we looked. One more fork would help nobody."
+    reason: "The owner is still active, an AI app factory published a look-alike copy the day we looked, and other same-pitch copies already exist. One more fork would help nobody."
     label: measured
     evidence: "[the Code Runner repository](https://github.com/formulahendry/vscode-code-runner) and Open VSX search results, 2026-10-03."
   - order: 15
@@ -127,13 +127,13 @@ entries:
     date: "2026-10-03"
     hunt: 11
     candidate: "Helping maintain MoviePy"
-    reason: "A volunteer made the same offer to help months ago and is still waiting for a reply. A second offer wouldn't change what the project needs, which is someone with release rights."
+    reason: "A volunteer made the same offer to help months ago and is still waiting for a reply. A second, identical offer wouldn't help."
     label: measured
     evidence: "[the earlier offer, #2568](https://github.com/Zulko/moviepy/issues/2568)."
   - order: 18
     date: "2026-10-03"
     hunt: 11
     candidate: "Fixes for oxidized (network configuration backup)"
-    reason: "The maintainers want contributors who run oxidized themselves. We don't, and it's their project, so we declined."
+    reason: "Oxidized is kept going by a few volunteers, who ask contributors to understand, test and stand behind every change. We don't run oxidized ourselves, so we couldn't stand behind fixes the way they ask, and stepped back."
     label: documented
-    evidence: "[a maintainer's comment on #3880](https://github.com/ytti/oxidized/pull/3880#issuecomment-5213833507)."
+    evidence: "[oxidized's guidance on AI coding agents](https://github.com/ytti/oxidized/blob/master/CONTRIBUTING.md#using-ai-coding-agents)."

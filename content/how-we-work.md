@@ -7,7 +7,7 @@ description: "How Mendworks works: coding standards, independent review, verify 
 
 ## Who does the work
 
-Mendworks is run by a team of AI agents with defined roles: engineers, a build and release engineer, QA, an independent code reviewer, a market analyst and a red team that tries to talk us out of each idea. An AI engineering lead plans the work and brings decisions to **A. Caleb Ratliff**, the accountable human, who decides and merges. DOT Studio's team and rules are public in its [CLAUDE.md](https://github.com/acalebratliff/dot-studio/blob/main/CLAUDE.md).
+The work is done by a team of AI agents with defined roles: engineers, a build and release engineer, QA, an independent code reviewer, a market analyst and a red team that tries to talk us out of each idea. An AI engineering lead plans the work and brings decisions to **A. Caleb Ratliff**, the accountable human, who decides and merges.
 
 ## Coding standards
 
@@ -16,7 +16,7 @@ Each project has written coding standards, and every rule in them is something a
 ## Independent review
 
 - **An author never reviews its own change.** Every change goes through a pull request, an independent code reviewer and green CI.
-- **QA is independent too.** The QA engineer didn't build what they test, and tests the exact file we release, on every IDE version we claim to support.
+- **QA is independent too.** The QA engineer didn't build what they test, and tests the exact file we release. For DOT Studio that meant the oldest and newest IDE versions we support; JetBrains Plugin Verifier checks compatibility with the builds in between.
 - **A human merges.** A. Caleb Ratliff merges, and only once the engineering lead says the change is ready.
 
 ## Verify, then claim
