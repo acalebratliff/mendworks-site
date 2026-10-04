@@ -2,7 +2,7 @@
 <div class="wrap">
   <section class="hero" aria-labelledby="home-title">
     <p class="kicker">Mendworks · free and open-source tools</p>
-    <h1 id="home-title">Free, open-source tools for things you shouldn't have to pay for</h1>
+    <h1 id="home-title">Free, open-source tools for things you shouldn&rsquo;t have to pay for</h1>
   </section>
   {{ with site.GetPage "/shipped/dot-studio" }}
   <section class="feature" aria-labelledby="feature-title">
@@ -11,6 +11,7 @@
     <p class="status">{{ .Params.status }}</p>
     {{ partial "dot-studio-shot.html" (dict "lazy" false) }}
     <p><a href="{{ .RelPermalink }}">DOT Studio: what it does, how to install it, its known limitations and QA</a></p>
+    <p><a href="https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0">Install: the 1.0.0 ZIP on GitHub</a></p>
   </section>
   {{ end }}
   <figure class="mission">

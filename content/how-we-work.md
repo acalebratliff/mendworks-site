@@ -7,7 +7,7 @@ description: "How Mendworks works: coding standards, independent review, verify 
 
 ## Who does the work
 
-The work is done by AI agents for building, release, QA, code review, market research and a red team that tries to talk us out of each idea. Each agent is a separate session of the same AI model, Anthropic's Claude, given its own role and its own instructions. An AI engineering lead, another session of the same model, plans the work and brings decisions to **A. Caleb Ratliff**, the accountable human, who decides and merges.
+The work is done by AI agents for building, release, QA, code review, market research and a red team that tries to talk us out of each idea. Each agent is a separate session of one of Anthropic's Claude models (we use more than one), given its own role and its own instructions. An AI engineering lead, another Claude session, plans the work and brings decisions to **A. Caleb Ratliff**, the accountable human, who decides and merges.
 
 ## Coding standards
 
@@ -15,7 +15,7 @@ Each project has written coding standards, and every rule in them is something a
 
 ## Independent review
 
-"Independent" here means a separate agent session that didn't write the work and sees only the result. It doesn't mean a different model or a person. Sessions of one model can share blind spots, which is one reason we publish our limitations and our targets.
+"Independent" here means a separate agent session that didn't write the work. It doesn't mean a different family of AI or a person. Claude sessions can share blind spots, which is one reason we publish our limitations and our targets.
 
 - **An author never reviews its own change.** Every change goes through a pull request, a review agent that didn't write it, and green CI.
 - **QA is separate too.** The QA agent didn't build what it tests, and it tests the exact file we release. For DOT Studio that meant the oldest and newest IDE versions we support; JetBrains Plugin Verifier checks compatibility with the builds in between.

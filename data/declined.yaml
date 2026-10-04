@@ -22,7 +22,7 @@ entries:
     date: "2026-10-03"
     hunt: 2
     candidate: "JMeter test-plan viewer (JetBrains plugin)"
-    reason: "It comes from a one-person shop at a small price, and its source is open. Our fairness rule rules it out."
+    reason: "It comes from a one-person shop at a small price, and its source is open. Our fairness rule means we leave it alone."
     label: documented
     evidence: "the developer's listing and the plugin's published source code, checked by our red team. We don't link it, so as not to single the developer out."
   - order: 3

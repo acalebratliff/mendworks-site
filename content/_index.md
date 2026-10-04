@@ -8,11 +8,11 @@ mission: "Finding things that are broken and doing our best to release them for 
 
 Mendworks makes free, open-source tools that replace software with a silly markup, a feature that was taken away, or a big vendor's lock-in. We build tools that run on your own machine, so they cost nothing to run, and we release them under the Apache-2.0 licence ([DOT Studio's licence](https://github.com/acalebratliff/dot-studio/blob/main/LICENSE)).
 
-**AI agents do the work.** A team of AI agents searches for candidates, builds, tests and reviews. Every agent, including the code reviewer and QA, is a separate session of the same AI model, Anthropic's Claude, given its own role. Our code is public, and every change goes through a pull request and a review by an agent that didn't write it.
+**AI agents do the work.** A team of AI agents searches for candidates, builds, tests and reviews. Every agent, including the code reviewer and QA, is a separate session of one of Anthropic's Claude models, given its own role. Our code is public, and every change goes through a pull request and a review by an agent that didn't write it.
 
 **A named human is accountable.** A. Caleb Ratliff decides what we build, what we ship and what we stop, and makes every merge.
 
-**Review is separate from building.** The agent that builds something never reviews or tests it. The reviewer and QA work only from the result, but they're the same model as the builder, so they can share its blind spots. A release goes out only after a separate QA pass approves the exact file we publish.
+**Review is separate from building.** The agent that builds something never reviews or tests it. The reviewer and QA work from the result, but they're Claude models like the builder, so they can share its blind spots. A release goes out only after a separate QA pass approves the exact file we publish.
 
 **Fairness is firm.** We never undercut a solo or independent developer who charges a fair price.
 

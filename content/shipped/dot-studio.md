@@ -8,7 +8,7 @@ description: "DOT Studio 1.0.0: a free JetBrains plugin for Graphviz DOT with a 
 
 ## Status
 
-**Version 1.0.0 was submitted to the JetBrains Marketplace on 2026-10-03 and is in review.** We'll add the store link here when JetBrains approves the listing. Until then you can install the [exact ZIP we submitted](https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0) from the GitHub release, which also gives its SHA-256 checksum.
+**Version 1.0.0 was submitted to the JetBrains Marketplace on 2026-10-03 and is in review.** We'll add the store link here when JetBrains approves the listing. Until then you can install the [exact ZIP we submitted](https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0) from the GitHub release, which also gives its SHA-256 checksum. To install it, download the ZIP, then in the IDE choose Settings › Plugins › ⚙ › Install Plugin from Disk… and pick the file.
 {.note}
 
 ## What it does
@@ -43,7 +43,7 @@ Not covered by QA: IDE versions 2025.3 and 2026.1, IDEs other than IntelliJ IDEA
 
 ## QA verdict: SHIP
 
-The QA agent was a separate session of the same model, and didn't build the plugin. It tested the exact file that was submitted, `dot-studio-1.0.0.zip`, SHA-256 `2410ecac2c0df9e64e09e954b2e75ef87746cd392227bec0ab7f8a67012948f6`, which matches the checksum on the [GitHub release](https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0). It installed the plugin the way a user would, then drove the real IDE actions with a test harness.
+The QA agent was a separate Claude session, and didn't build the plugin. It tested the exact file that was submitted, `dot-studio-1.0.0.zip`, SHA-256 `2410ecac2c0df9e64e09e954b2e75ef87746cd392227bec0ab7f8a67012948f6`, which matches the checksum on the [GitHub release](https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0). It installed the plugin the way a user would, then drove the real IDE actions with a test harness.
 
 The QA reports are internal and not published, so there is no link for the claims below. This section is summarised from our internal QA notes for the release candidate, dated 2026-10-02:
 
