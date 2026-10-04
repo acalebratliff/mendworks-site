@@ -12,10 +12,10 @@
     <div><dt><span class="label label-inferred">inferred</span></dt><dd>Our own reasoning.</dd></div>
   </dl>
   <h2 id="entries">Entries</h2>
-  <ol class="kills" reversed>
-    {{ range sort site.Data.killlog.entries "order" "desc" }}
-    <li class="kill">
-      <p class="kill-meta"><time datetime="{{ .date }}">{{ .date }}</time> · Hunt {{ .hunt }} · <span class="label label-{{ .label }}">{{ .label }}</span></p>
+  <ol class="declined" reversed>
+    {{ range sort site.Data.declined.entries "order" "desc" }}
+    <li class="decline">
+      <p class="decline-meta"><time datetime="{{ .date }}">{{ .date }}</time> · Hunt {{ .hunt }} · <span class="label label-{{ .label }}">{{ .label }}</span></p>
       <h3>{{ .candidate }}</h3>
       <p>{{ .reason | markdownify }}</p>
       <p class="evidence">Evidence: {{ .evidence | markdownify }}</p>

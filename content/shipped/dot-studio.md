@@ -13,6 +13,8 @@ description: "DOT Studio 1.0.0: a free JetBrains plugin for Graphviz DOT with a 
 
 ## What it does
 
+{{< dot-studio-shot >}}
+
 From the [README](https://github.com/acalebratliff/dot-studio/blob/main/README.md) and the [1.0.0 changelog](https://github.com/acalebratliff/dot-studio/blob/main/CHANGELOG.md):
 
 - `.dot` and `.gv` files open as DOT files, with syntax highlighting, error highlighting that marks only the broken statement, folding, brace matching, commenting and a Structure view.
@@ -22,9 +24,15 @@ From the [README](https://github.com/acalebratliff/dot-studio/blob/main/README.m
 
 It is compatible with JetBrains IDEs 2025.2 to 2026.2: JetBrains Plugin Verifier checks it against IntelliJ IDEA builds 252 to 262 (see [the build file](https://github.com/acalebratliff/dot-studio/blob/main/build.gradle.kts)). That is a compatibility check, not a test run. QA ran it in the two IDEs below.
 
+## Why we built it
+
+The most-downloaded free plugin for DOT files in JetBrains IDEs, with about 154,000 downloads, hasn't had a release since August 2024. We wanted a free DOT plugin that is maintained for current IDEs and shows a live preview without a separate Graphviz install.
+
+We don't undercut an independent developer who charges a fair price, so we checked for a paid alternative before we built. One exists, but it doesn't appear in JetBrains Marketplace search, it publishes no price, and it doesn't install on 2026.2. We checked the Marketplace on 2026-10-02 and keep checking it. If that changes, we'll say so here.
+
 ## Versions tested
 
-Independent QA ran the release build in two IDEs: IntelliJ IDEA 2025.2 (build 252) and 2026.2 (build 262). No other versions and no other JetBrains IDEs were run.
+The QA agent ran the release build in two IDEs: IntelliJ IDEA 2025.2 (build 252) and 2026.2 (build 262). No other versions and no other JetBrains IDEs were run.
 
 | IDE | Build |
 |---|---|
@@ -35,7 +43,7 @@ Not covered by QA: IDE versions 2025.3 and 2026.1, IDEs other than IntelliJ IDEA
 
 ## QA verdict: SHIP
 
-The QA engineer was independent: they didn't build the plugin. They tested the exact file that was submitted, `dot-studio-1.0.0.zip`, SHA-256 `2410ecac2c0df9e64e09e954b2e75ef87746cd392227bec0ab7f8a67012948f6`, which matches the checksum on the [GitHub release](https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0). They installed it the way a user would, then drove the real IDE actions with a test harness.
+The QA agent was a separate session of the same model, and didn't build the plugin. It tested the exact file that was submitted, `dot-studio-1.0.0.zip`, SHA-256 `2410ecac2c0df9e64e09e954b2e75ef87746cd392227bec0ab7f8a67012948f6`, which matches the checksum on the [GitHub release](https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0). It installed the plugin the way a user would, then drove the real IDE actions with a test harness.
 
 The QA reports are internal and not published, so there is no link for the claims below. This section is summarised from our internal QA notes for the release candidate, dated 2026-10-02:
 

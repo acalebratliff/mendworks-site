@@ -1,0 +1,8 @@
+{{- /* DOT Studio screenshot, resized to WebP at build time. Context: a dict with "lazy" (bool). */ -}}
+{{- with resources.Get "images/dot-studio-live-preview.png" -}}
+{{- $small := .Resize "704x webp q78 Lanczos" -}}
+{{- $large := .Resize "1408x webp q78 Lanczos" -}}
+<figure class="shot">
+  <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 704w, {{ $large.RelPermalink }} 1408w" sizes="(min-width: 46rem) 42rem, calc(100vw - 2rem)" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="DOT Studio in IntelliJ IDEA: a DOT file describing a small service architecture on the left, and its live preview on the right, drawn as boxes grouped into clusters and joined by arrows."{{ if $.lazy }} loading="lazy"{{ end }} decoding="async">
+</figure>
+{{- end -}}

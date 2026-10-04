@@ -5,7 +5,7 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
-  description = "Free, open-source tools that replace software people shouldn't have to pay for. Every claim links to its proof."
+  description = "Free, open-source tools that replace software people shouldn't have to pay for, with the work behind them shown. Where the evidence is internal, we say so."
   accountable = "A. Caleb Ratliff"
   email = "contact@mendworks.dev"
   github = "https://github.com/acalebratliff"
@@ -26,8 +26,8 @@ disableKinds = ["taxonomy", "term", "RSS"]
     pageRef = "/contributions"
     weight = 20
   [[menus.main]]
-    name = "Kill log"
-    pageRef = "/kill-log"
+    name = "What we didn't build"
+    pageRef = "/what-we-didnt-build"
     weight = 30
   [[menus.main]]
     name = "How we work"

@@ -1,13 +1,22 @@
 {{ define "main" }}
 <div class="wrap">
-  <section class="hero" aria-labelledby="mission-title">
+  <section class="hero" aria-labelledby="home-title">
     <p class="kicker">Mendworks · free and open-source tools</p>
-    <h1 id="mission-title" class="visually-hidden">Mendworks</h1>
-    <figure class="mission">
-      <blockquote><p>“{{ .Params.mission }}”</p></blockquote>
-      <figcaption>{{ site.Params.accountable }}</figcaption>
-    </figure>
+    <h1 id="home-title">Free, open-source tools for things you shouldn't have to pay for</h1>
   </section>
+  {{ with site.GetPage "/shipped/dot-studio" }}
+  <section class="feature" aria-labelledby="feature-title">
+    <h2 id="feature-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Params.lede }}</p>
+    <p class="status">{{ .Params.status }}</p>
+    {{ partial "dot-studio-shot.html" (dict "lazy" false) }}
+    <p><a href="{{ .RelPermalink }}">DOT Studio: what it does, how to install it, its known limitations and QA</a></p>
+  </section>
+  {{ end }}
+  <figure class="mission">
+    <blockquote><p>“{{ .Params.mission }}”</p></blockquote>
+    <figcaption>{{ site.Params.accountable }}</figcaption>
+  </figure>
   <div class="prose">
     {{ .Content }}
   </div>

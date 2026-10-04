@@ -167,7 +167,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
 .lede { font-size: 1.25rem; color: var(--muted); }
 
 /* Home */
-.hero { padding: 3.5rem 0 1rem; }
+.hero { padding: 3rem 0 1.5rem; }
 .mission { margin: 0; }
 .mission blockquote { margin: 0; }
 .mission blockquote p {
@@ -184,7 +184,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
   color: var(--muted);
 }
 .mission figcaption::before { content: "— "; }
-.hero + .prose { padding-top: 1rem; }
+.mission + .prose { padding-top: 2rem; }
 
 /* Tables */
 .table-scroll { overflow-x: auto; margin: 0 0 1.25rem; }
@@ -213,18 +213,18 @@ th { font-family: var(--sans); font-weight: 700; }
 .card + .card { margin-top: 1rem; }
 .card h2 { margin: 0 0 0.25rem; font-size: 1.3rem; }
 .card p { margin: 0.25rem 0 0; }
-.status, .kill-meta {
+.status, .decline-meta {
   font-family: var(--mono);
   font-size: 0.82rem;
   color: var(--muted);
 }
 
-/* Kill log */
-.kills { list-style: none; padding: 0; margin: 1.5rem 0 0; }
-.kill { border-top: 1px solid var(--rule); padding: 1.25rem 0 0.5rem; }
-.kill + .kill { margin-top: 0; }
-.kill h3 { margin: 0.25rem 0 0.5rem; }
-.kill p { margin-bottom: 0.6rem; }
+/* What we didn't build */
+.declined { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.decline { border-top: 1px solid var(--rule); padding: 1.25rem 0 0.5rem; }
+.decline + .decline { margin-top: 0; }
+.decline h3 { margin: 0.25rem 0 0.5rem; }
+.decline p { margin-bottom: 0.6rem; }
 .evidence { font-size: 0.95rem; color: var(--muted); }
 .label {
   display: inline-block;
@@ -262,3 +262,26 @@ th { font-family: var(--sans); font-weight: 700; }
 .legend div { display: flex; gap: 0.75rem; align-items: baseline; margin-bottom: 0.4rem; }
 .legend dt { flex: 0 0 7.5rem; }
 .legend dd { margin: 0; }
+
+/* Screenshots */
+.shot { margin: 1.25rem 0; }
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+
+/* Home: the current release, ahead of the mission */
+.feature {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.1rem 1.25rem 1.25rem;
+  background: var(--surface);
+  margin: 0 0 2.5rem;
+}
+.feature h2 { margin: 0 0 0.25rem; font-size: 1.5rem; }
+.feature p { margin: 0.25rem 0 0; }
+.feature .shot { margin: 1rem 0; }
+.hero h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); max-width: 22ch; }
