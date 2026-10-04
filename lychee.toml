@@ -1,0 +1,9 @@
+# Link check for the built site (public/). Run from the repo root.
+root_dir = "public"
+max_retries = 3
+retry_wait_time = 5
+accept = ["200", "429"]
+exclude = [
+  # The site's own domain isn't live until launch; canonical links point at it.
+  "^https://mendworks\\.dev",
+]

@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="wrap prose">
+  <header class="page-head">
+    {{ with .Params.kicker }}<p class="kicker">{{ . }}</p>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lede }}<p class="lede">{{ . }}</p>{{ end }}
+  </header>
+  {{ .Content }}
+  <dl class="legend">
+    <div><dt><span class="label label-measured">measured</span></dt><dd>We saw it ourselves, in an API, a repository or a test we ran.</dd></div>
+    <div><dt><span class="label label-documented">documented</span></dt><dd>It's stated in a policy, a source file, an issue or a maintainer's comment.</dd></div>
+    <div><dt><span class="label label-inferred">inferred</span></dt><dd>Our own reasoning.</dd></div>
+  </dl>
+  <h2 id="entries">Entries</h2>
+  <ol class="kills" reversed>
+    {{ range sort site.Data.killlog.entries "order" "desc" }}
+    <li class="kill">
+      <p class="kill-meta"><time datetime="{{ .date }}">{{ .date }}</time> · Hunt {{ .hunt }} · <span class="label label-{{ .label }}">{{ .label }}</span></p>
+      <h3>{{ .candidate }}</h3>
+      <p>{{ .reason | markdownify }}</p>
+      <p class="evidence">Evidence: {{ .evidence | markdownify }}</p>
+    </li>
+    {{ end }}
+  </ol>
+</div>
+{{ end }}

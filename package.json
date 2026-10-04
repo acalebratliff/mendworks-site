@@ -1,0 +1,16 @@
+{
+  "name": "mendworks-site",
+  "private": true,
+  "description": "Check tools for mendworks.dev. The site itself has no JavaScript and no Node build.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "validate": "html-validate \"public/**/*.html\"",
+    "a11y": "pa11y-ci --config .pa11yci.json",
+    "lighthouse": "lhci autorun"
+  },
+  "devDependencies": {
+    "@lhci/cli": "0.15.1",
+    "html-validate": "11.16.2",
+    "pa11y-ci": "4.1.1"
+  }
+}

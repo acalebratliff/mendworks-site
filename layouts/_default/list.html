@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="wrap prose">
+  <header class="page-head">
+    {{ with .Params.kicker }}<p class="kicker">{{ . }}</p>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lede }}<p class="lede">{{ . }}</p>{{ end }}
+  </header>
+  {{ .Content }}
+  {{ with .Pages }}
+  <ul class="cards">
+    {{ range . }}
+    <li class="card">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Params.status }}<p class="status">{{ . }}</p>{{ end }}
+      {{ with .Params.lede }}<p>{{ . }}</p>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+{{ end }}

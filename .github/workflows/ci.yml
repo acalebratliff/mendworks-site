@@ -1,0 +1,88 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Build and check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Hugo 0.147.0 extended
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
+        with:
+          hugo-version: "0.147.0"
+          extended: true
+
+      - name: Build the site
+        run: hugo --minify
+
+      - name: Check the site ships no JavaScript
+        shell: python
+        run: |
+          import pathlib, re, sys
+          site = pathlib.Path("public")
+          problems = [str(p) for p in site.rglob("*.js")]
+          for page in site.rglob("*.html"):
+              html = re.sub(r"<!--.*?-->", "", page.read_text(encoding="utf-8"), flags=re.S)
+              if re.search(r"<script|\son[a-z]+=", html, re.I):
+                  problems.append(str(page))
+          if problems:
+              print("JavaScript found (the analytics beacon must stay commented out until launch):")
+              print("\n".join(problems))
+              sys.exit(1)
+          print("No JavaScript in public/.")
+
+      - name: Link check (lychee)
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          args: --config lychee.toml --no-progress 'public/**/*.html'
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install check tools
+        run: npm ci
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "true"
+
+      - name: HTML validation (html-validate)
+        run: npm run validate
+
+      - name: Accessibility (pa11y-ci, axe and HTML_CodeSniffer, WCAG 2 AA)
+        run: |
+          python3 -m http.server 8080 --directory public >/dev/null 2>&1 &
+          sleep 2
+          npm run a11y
+
+      - name: Lighthouse CI (all categories at least 95)
+        run: npm run lighthouse
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+
+      - name: Keep Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci/
+          if-no-files-found: ignore
+          retention-days: 14

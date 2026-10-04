@@ -1,0 +1,39 @@
+baseURL = "https://mendworks.dev/"
+languageCode = "en-GB"
+title = "Mendworks"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  description = "Free, open-source tools that replace software people shouldn't have to pay for. Every claim links to its proof."
+  accountable = "A. Caleb Ratliff"
+  email = "contact@mendworks.dev"
+  github = "https://github.com/acalebratliff"
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[markup.goldmark.parser.attribute]
+  block = true
+
+[menus]
+  [[menus.main]]
+    name = "Shipped"
+    pageRef = "/shipped"
+    weight = 10
+  [[menus.main]]
+    name = "Contributions"
+    pageRef = "/contributions"
+    weight = 20
+  [[menus.main]]
+    name = "Kill log"
+    pageRef = "/kill-log"
+    weight = 30
+  [[menus.main]]
+    name = "How we work"
+    pageRef = "/how-we-work"
+    weight = 40
+  [[menus.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 50
