@@ -1,0 +1,13 @@
+{
+  "extends": ["html-validate:recommended", "html-validate:a11y"],
+  "rules": {
+    "attribute-boolean-style": "off",
+    "attribute-empty-style": "off",
+    "attr-quotes": "off",
+    "no-trailing-whitespace": "off",
+    "void-style": "off",
+    "doctype-style": "off",
+    "no-inline-style": "off",
+    "element-required-ancestor": "error"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": [
+      "axe",
+      "htmlcs"
+    ],
+    "timeout": 60000,
+    "chromeLaunchConfig": {
+      "executablePath": "/usr/bin/google-chrome",
+      "args": [
+        "--no-sandbox",
+        "--disable-dev-shm-usage"
+      ]
+    }
+  },
+  "urls": [
+    "http://localhost:8080/",
+    "http://localhost:8080/shipped/",
+    "http://localhost:8080/shipped/dot-studio/",
+    "http://localhost:8080/contributions/",
+    "http://localhost:8080/kill-log/",
+    "http://localhost:8080/how-we-work/",
+    "http://localhost:8080/contact/",
+    "http://localhost:8080/404.html"
+  ]
+}

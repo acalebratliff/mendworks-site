@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="wrap prose">
+  <header class="page-head">
+    <h1>Page not found</h1>
+    <p class="lede">Nothing lives at this address.</p>
+  </header>
+  <p>Try the <a href="{{ "/" | relURL }}">home page</a>, or tell us about the broken link at <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>.</p>
+</div>
+{{ end }}

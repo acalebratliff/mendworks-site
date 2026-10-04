@@ -1,0 +1,139 @@
+# Kill log entries. One entry per declined candidate (or per hunt closed with no candidate).
+# Fields:
+#   order:     integer, higher shows first. Use the next number up for a new entry.
+#   date:      YYYY-MM-DD the decision was made
+#   hunt:      hunt number
+#   candidate: what we looked at (describe AI app factories generically; never name them)
+#   reason:    one or two sentences, respectful to every maintainer and project (Markdown allowed)
+#   label:     measured | documented | inferred
+#              measured   = we saw it ourselves in an API, a repo or a test
+#              documented = stated in a policy, source file, issue or maintainer comment
+#              inferred   = our own reasoning
+#   evidence:  Markdown link(s) to public evidence, or a plain statement of where the evidence lives
+entries:
+  - order: 1
+    date: "2026-10-03"
+    hunt: 2
+    candidate: "XSD/WSDL and JSON Schema diagrams (JetBrains plugin)"
+    reason: "The existing plugin comes from a solo developer at a fair price. Our fairness rule says we never undercut an honest living, so we stopped."
+    label: documented
+    evidence: "the developer's own listing and site notice, checked by our red team. We don't link it, so as not to single the developer out."
+  - order: 2
+    date: "2026-10-03"
+    hunt: 2
+    candidate: "JMeter test-plan viewer (JetBrains plugin)"
+    reason: "The paid plugin still opens files without a licence (it asks for support, nothing more), its source is open, and it comes from a one-person shop at a small price. There was nothing to free."
+    label: documented
+    evidence: "the plugin's published source code, read by our red team. Not linked, for the same reason as above."
+  - order: 3
+    date: "2026-10-03"
+    hunt: 2
+    candidate: "Outlook PST archive viewer (new app)"
+    reason: "We tested the free, MIT-licensed pst-viewer before deciding. It opened 5.6 GB and 9.4 GB archives and recovered 5 of 6 damaged files. A new app would add nothing; the one gap we found, bulk export, belongs in that project."
+    label: measured
+    evidence: "our runtime test; the project is [bod09/pst-viewer](https://github.com/bod09/pst-viewer)."
+  - order: 4
+    date: "2026-10-03"
+    hunt: 2
+    candidate: "Dev Containers for VS Code-compatible editors (Open VSX)"
+    reason: "Four free newcomers arrived in ten months, and one already supports Docker Compose. The gap had closed."
+    label: measured
+    evidence: "Open VSX listings and download counts, measured by our red team on 2026-10-03."
+  - order: 5
+    date: "2026-10-03"
+    hunt: 3
+    candidate: "Whole hunt: shutdown rescues and hardware freed from the cloud"
+    reason: "We screened 43 candidates and none met all seven of our tests. What remained had small user bases and no store where newcomers find them."
+    label: measured
+    evidence: "our internal candidate list, and install counts from Home Assistant analytics, 2026-10-03."
+  - order: 6
+    date: "2026-10-03"
+    hunt: 4
+    candidate: "Whole hunt: packaging missing Linux apps for Flathub"
+    reason: "Flathub doesn't accept AI-written manifests or AI-opened submissions. Our work is done by AI agents, so we can't honestly package there, however good the candidates."
+    label: documented
+    evidence: "[Flathub's Generative AI policy](https://docs.flathub.org/docs/for-app-authors/requirements#generative-ai-policy)."
+  - order: 7
+    date: "2026-10-03"
+    hunt: 5
+    candidate: "Calendar plugin for Obsidian"
+    reason: "Demand is real, but the author is still active in the Obsidian community and a volunteer has already offered a maintenance release. The only route left to us was a rival listing, which would elbow them out. Red-team score 56.8 against our bar of 70."
+    label: documented
+    evidence: "[the volunteer's maintenance offer, #418](https://github.com/liamcain/obsidian-calendar-plugin/issues/418)."
+  - order: 8
+    date: "2026-10-03"
+    hunt: 7
+    candidate: "Signature editor for Thunderbird for Android (#8841)"
+    reason: "Already done: an outside contributor's HTML signature support was merged on 2026-08-20."
+    label: measured
+    evidence: "[thunderbird-android pull request #10876](https://github.com/thunderbird/thunderbird-android/pull/10876)."
+  - order: 9
+    date: "2026-10-03"
+    hunt: 7
+    candidate: "Running more than one Joplin profile at once (#591)"
+    reason: "Already shipped: Joplin 3.3 added a second app instance, and 3.2 added multiple windows."
+    label: documented
+    evidence: "[Joplin's multiple-instances documentation](https://github.com/laurent22/joplin/blob/dev/readme/apps/multiple_instances.md)."
+  - order: 10
+    date: "2026-10-03"
+    hunt: 8
+    candidate: "Fixes for ScubaGear (CISA's Microsoft 365 security baselines)"
+    reason: "The team accepts outside pull requests only for issues in an active milestone, and the issues we looked at had none. That's a reasonable way to run a security project, so we stepped back."
+    label: documented
+    evidence: "[a maintainer closing an outside fix for that reason, #2399](https://github.com/cisagov/ScubaGear/pull/2399)."
+  - order: 11
+    date: "2026-10-03"
+    hunt: 8
+    candidate: "Implicit tiling for NASA's 3DTilesRendererJS (#608)"
+    reason: "Another volunteer already has an open pull request for it. Joining would elbow them out."
+    label: measured
+    evidence: "[the volunteer's open pull request, #1731](https://github.com/NASA-AMMOS/3DTilesRendererJS/pull/1731)."
+  - order: 12
+    date: "2026-10-03"
+    hunt: 9
+    candidate: "Absolute lighten and darken for the color npm package (#53)"
+    reason: "The invitation dates from 2019, and in 2021 the owner said the library's API had grown enough. Adding to it now wouldn't be welcome help."
+    label: documented
+    evidence: "[the owner's 2021 comment](https://github.com/Qix-/color/issues/53#issuecomment-849860888)."
+  - order: 13
+    date: "2026-10-03"
+    hunt: 9
+    candidate: "Custom sync server for Readest (#1168)"
+    reason: "Readest is an independent project, and its maintainer plans this feature for the paid plan. Building it for the project would free nobody from paying, so it isn't ours to take."
+    label: documented
+    evidence: "[the maintainer's comment on #1168](https://github.com/readest/readest/issues/1168#issuecomment-2888088288)."
+  - order: 14
+    date: "2026-10-03"
+    hunt: 10
+    candidate: "A maintained Code Runner for Open VSX"
+    reason: "The owner is still active, an AI app factory published a look-alike copy the day we looked, and other same-pitch copies already exist. One more fork would help nobody."
+    label: measured
+    evidence: "[the Code Runner repository](https://github.com/formulahendry/vscode-code-runner) and Open VSX search results, 2026-10-03."
+  - order: 15
+    date: "2026-10-03"
+    hunt: 10
+    candidate: "A maintained autoDocstring for Open VSX"
+    reason: "Four newcomers with the same pitch have appeared since May. The gap is already filled several times over."
+    label: measured
+    evidence: "[the autoDocstring repository](https://github.com/NilsJPWerner/autoDocstring) and Open VSX search results, 2026-10-03."
+  - order: 16
+    date: "2026-10-03"
+    hunt: 10
+    candidate: "A maintained PlantUML extension for Open VSX"
+    reason: "A maintained, MIT-licensed extension already covers PlantUML preview and export there."
+    label: measured
+    evidence: "[PlantUML Markdown Preview on Open VSX](https://open-vsx.org/extension/yss-tazawa/plantuml-markdown-preview)."
+  - order: 17
+    date: "2026-10-03"
+    hunt: 11
+    candidate: "Helping maintain MoviePy"
+    reason: "A volunteer made the same offer to help months ago and is still waiting for a reply. A second, identical offer wouldn't help."
+    label: measured
+    evidence: "[the earlier offer, #2568](https://github.com/Zulko/moviepy/issues/2568)."
+  - order: 18
+    date: "2026-10-03"
+    hunt: 11
+    candidate: "Fixes for oxidized (network configuration backup)"
+    reason: "Oxidized's maintainers ask contributors to understand, test and stand behind every change. We don't run oxidized ourselves, so we couldn't stand behind fixes the way they ask, and stepped back."
+    label: documented
+    evidence: "[oxidized's guidance on AI coding agents](https://github.com/ytti/oxidized/blob/master/CONTRIBUTING.md#using-ai-coding-agents)."

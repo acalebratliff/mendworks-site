@@ -1,0 +1,16 @@
+# Link check for the built site (public/). Run from the repo root.
+root_dir = "public"
+# Check #anchors, on our own pages and on external pages.
+include_fragments = "anchor-only"
+# Directory links such as /how-we-work/ resolve to their index.html, so their anchors are checked.
+index_files = ["index.html"]
+max_retries = 3
+retry_wait_time = 5
+accept = ["200"]
+# GitHub renders #issuecomment-N anchors with JavaScript, so lychee can't see them.
+# Check the issue page itself instead (the comment IDs were verified with `gh api`).
+remap = ['(https://github\.com/[^#]+)#issuecomment-\d+ $1']
+exclude = [
+  # The site's own domain isn't live until launch; canonical and Open Graph URLs point at it.
+  "^https://mendworks\\.dev",
+]

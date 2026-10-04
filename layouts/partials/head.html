@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{ $title := cond .IsHome (printf "%s: free tools, every claim with its proof" site.Title) (printf "%s · %s" .Title site.Title) }}
+{{ $desc := or .Description site.Params.description }}
+{{ $is404 := eq .Kind "404" }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<meta name="color-scheme" content="light dark">
+{{ if $is404 }}<meta name="robots" content="noindex">{{ else }}<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta name="twitter:card" content="summary">{{ end }}
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+{{ with resources.Get "css/main.css" | minify }}<style>{{ .Content | safeCSS }}</style>{{ end }}
