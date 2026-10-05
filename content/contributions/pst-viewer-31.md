@@ -1,5 +1,5 @@
 ---
-title: "pst-viewer: export a folder, a mailbox or a selection as .eml files"
+title: "pst-viewer: export folders and mailboxes as .eml"
 status: "Merged 2026-10-05"
 lede: "pst-viewer can now save a whole Outlook mailbox, or any part of it, as standard .eml files."
 ---
