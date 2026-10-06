@@ -15,11 +15,11 @@ Each project has written coding standards, and every rule in them is something a
 
 ## Independent review
 
-"Independent" here means a separate agent session that didn't write the work. It doesn't mean a different family of AI or a person. Claude sessions can share blind spots, which is one reason we publish our limitations and our targets.
+"Independent" here means a separate agent session that didn't write the work. The reviewer is another Claude session from the same model family, with no person in that role. Claude sessions can share blind spots, which is one reason we publish our limitations and our targets.
 
 - **An author never reviews its own change.** Every change goes through a pull request, a review agent that didn't write it, and green CI.
 - **QA is separate too.** The QA agent didn't build what it tests, and it tests the exact file we release. For DOT Studio that meant the oldest and newest IDE versions we support; JetBrains Plugin Verifier checks compatibility with the builds in between.
-- **A human merges.** A. Caleb Ratliff merges, and only once the engineering lead says the change is ready.
+- **A human merges.** In our own repositories, A. Caleb Ratliff merges, and only once the engineering lead says the change is ready.
 
 ## Verify, then claim
 
@@ -30,7 +30,7 @@ Each project has written coding standards, and every rule in them is something a
 
 ## How we choose what to build
 
-A candidate has to pass every test: people pay unfairly for it or lost it; the lock-in belongs to a big vendor or a dead product; demand is measured, not guessed; the current option is weak; we can replace it cleanly under a compatible licence; it can reach people in a store where they look; and it costs about nothing to run. Then a red-team agent tries to talk us out of it. Most candidates don't survive, and [What we didn't build](/what-we-didnt-build/) shows why.
+A candidate has to pass every test: people pay unfairly for it or lost it; the lock-in belongs to a big vendor or a dead product; demand is measured; the current option is weak; we can replace it cleanly under a compatible licence; it can reach people in a store where they look; and it costs about nothing to run. Then a red-team agent tries to talk us out of it. Most candidates don't survive, and [What we didn't build](/what-we-didnt-build/) shows why.
 
 ## The fairness rule
 

@@ -2,7 +2,7 @@
 
 The source of [mendworks.dev](https://mendworks.dev), the Mendworks showcase site: what we've shipped, what we've contributed upstream, what we decided not to build and why, and how we work. Claims link to their evidence; where the evidence is internal, the site says so.
 
-The site is static HTML and CSS built with [Hugo](https://gohugo.io/). It ships **no JavaScript**: the only script it may ever load is the Cloudflare Web Analytics beacon, which stays commented out in `layouts/_default/baseof.html` until launch.
+The site is static HTML and CSS built with [Hugo](https://gohugo.io/). It ships **no JavaScript**: the only script it may ever load is the Cloudflare Web Analytics beacon, which stays commented out in `layouts/_default/baseof.html` until the owner enables it in its own pull request.
 
 ## Layout
 
@@ -71,16 +71,16 @@ Only merged work is listed: never proposals, open pull requests or offers to hel
    ---
    title: "Project: what the change does"
    status: "Merged YYYY-MM-DD"
-   lede: "One sentence on what it fixed."
+   description: "One sentence for search results and link previews."
+   lede: "One sentence on what it adds."
    ---
 
    - **Merged pull request:** link to the PR
-   - **What it fixed:** one or two sentences, linking the issue
+   - **What it adds:** one or two sentences, linking the issue
    - **How AI was used:** what the agents did and what the human did
    ```
 
-2. Remove the "None merged yet" paragraph from `content/contributions/_index.md`.
-3. Get the owner's approval of the text in the pull request.
+2. Get the owner's approval of the text in the pull request.
 
 ### A "What we didn't build" entry
 
@@ -88,7 +88,7 @@ Add an entry to `data/declined.yaml`; the comment at the top explains each field
 
 ## Deploying (Cloudflare Pages)
 
-The owner sets this up in the Cloudflare dashboard once the text is approved. No one else performs account actions.
+The owner set this up in the Cloudflare dashboard (live since 2026-10-04). No one else performs account actions. These are the settings:
 
 - **Framework preset:** Hugo
 - **Build command:** `hugo --minify`

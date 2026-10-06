@@ -22,14 +22,14 @@ entries:
     date: "2026-10-03"
     hunt: 2
     candidate: "JMeter test-plan viewer (JetBrains plugin)"
-    reason: "It comes from a one-person shop at a small price, and its source is open. Our fairness rule means we leave it alone."
+    reason: "The viewer already opens files without a licence, its source is open, and it comes from a one-person shop at a small price. There was nothing to free, and our fairness rule applies too."
     label: documented
     evidence: "the developer's listing and the plugin's published source code, checked by our red team. We don't link it, so as not to single the developer out."
   - order: 3
     date: "2026-10-03"
     hunt: 2
     candidate: "Outlook PST archive viewer (new app)"
-    reason: "We tested the free, MIT-licensed pst-viewer before deciding. It opened 5.6 GB and 9.4 GB archives and recovered 5 of 6 damaged files. A new app would add nothing; the one gap we found, bulk export, belongs in that project."
+    reason: "We tested the free, MIT-licensed pst-viewer before deciding. It opened 5.6 GB and 9.4 GB archives and recovered 5 of 6 damaged files. The main gap we found was bulk export, and we added it to pst-viewer: [our contribution](/contributions/pst-viewer-31/)."
     label: measured
     evidence: "our runtime test; the project is [bod09/pst-viewer](https://github.com/bod09/pst-viewer)."
   - order: 4
@@ -64,7 +64,7 @@ entries:
     date: "2026-10-03"
     hunt: 7
     candidate: "Running more than one Joplin profile at once (#591)"
-    reason: "Already shipped: Joplin 3.3 added a second app instance, and 3.2 added multiple windows."
+    reason: "Already shipped: Joplin Desktop runs two instances at once, each with its own profile and settings."
     label: documented
     evidence: "[Joplin's multiple-instances documentation](https://github.com/laurent22/joplin/blob/dev/readme/apps/multiple_instances.md)."
   - order: 10

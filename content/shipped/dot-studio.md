@@ -22,7 +22,7 @@ From the [README](https://github.com/acalebratliff/dot-studio/blob/main/README.m
 - Zoom and pan the preview, and export the graph as SVG, or as PNG at 1x or 2x.
 - No network calls and no data collection (by design; QA saw none in the logs but didn't run a network capture).
 
-It is compatible with JetBrains IDEs 2025.2 to 2026.2: JetBrains Plugin Verifier checks it against IntelliJ IDEA builds 252 to 262 (see [the build file](https://github.com/acalebratliff/dot-studio/blob/main/build.gradle.kts)). That is a compatibility check, not a test run. QA ran it in the two IDEs below.
+It is compatible with JetBrains IDEs 2025.2 to 2026.2: JetBrains Plugin Verifier checks it against IntelliJ IDEA builds 252 to 262 (see [the build file](https://github.com/acalebratliff/dot-studio/blob/main/build.gradle.kts)). That is a compatibility check. QA ran it in the two IDEs below.
 
 ## Why we built it
 
@@ -66,7 +66,7 @@ The QA reports are internal and not published, so there is no link for the claim
 
 ## Launch targets, set before launch
 
-We set these targets before release, so the results can't move them. They count downloads of this release only, from the day the listing goes live.
+We set these targets before release, so the results can't move them. They count downloads of this release only, from 2026-10-05, the day the listing went live.
 
 | Checkpoint | Target | What happens |
 |---|---|---|
