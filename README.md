@@ -2,7 +2,7 @@
 
 The source of [mendworks.dev](https://mendworks.dev), the Mendworks showcase site: what we've shipped, what we've contributed upstream, what we decided not to build and why, and how we work. Claims link to their evidence; where the evidence is internal, the site says so.
 
-The site is static HTML and CSS built with [Hugo](https://gohugo.io/). It ships **no JavaScript**: the only script it may ever load is the Cloudflare Web Analytics beacon, which stays commented out in `layouts/_default/baseof.html` until the owner enables it in its own pull request.
+The site is static HTML and CSS built with [Hugo](https://gohugo.io/). It ships **one script**, the Cloudflare Web Analytics beacon in `layouts/_default/baseof.html`, enabled by the owner on 2026-10-06; the CI "no JavaScript" step allows that one tag and nothing else.
 
 ## Layout
 
@@ -97,7 +97,7 @@ The owner set this up in the Cloudflare dashboard (live since 2026-10-04). No on
 - **Production branch:** `main`
 - **Preview deployments: None.** In Settings › Builds & deployments › Preview branch control, set preview branches to *None*, so only `main` deploys. By default Pages publishes every other branch to a public `*.pages.dev` URL, which would make unapproved draft text public. (If previews are ever wanted, protect them with Cloudflare Access first.)
 
-Then add `mendworks.dev` as the custom domain. If Cloudflare Web Analytics is enabled, put its site token into the commented-out beacon in `layouts/_default/baseof.html`, uncomment it, and allow that one script in the CI "no JavaScript" step, in its own pull request. Don't use the Pages one-click Web Analytics toggle: it injects the beacon at Cloudflare's edge, bypassing the CI "no JavaScript" check and code review.
+Then add `mendworks.dev` as the custom domain. Cloudflare Web Analytics is enabled with the manual JS snippet ("Enable with JS Snippet installation"): its beacon is in `layouts/_default/baseof.html`, and the CI "no JavaScript" step allows that one tag. Don't use the Pages one-click Web Analytics toggle: it injects the beacon at Cloudflare's edge, bypassing the CI "no JavaScript" check and code review.
 
 ## Licence
 

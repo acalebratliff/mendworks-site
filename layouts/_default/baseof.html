@@ -10,14 +10,8 @@
 {{ block "main" . }}{{ end }}
 </main>
 {{ partial "footer.html" . }}
-<!--
-  Cloudflare Web Analytics (cookieless). Approved by the owner and off for now.
-  To enable it, the owner creates the site in the Cloudflare dashboard,
-  then replaces TOKEN below with the site token and uncomments this tag.
-  It is the only script the site may load. (Go templates drop HTML comments,
-  so this note never reaches the built pages. The CI "no JavaScript" step
-  must then be updated to allow this one script.)
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "TOKEN"}'></script>
--->
+<!-- Cloudflare Web Analytics (cookieless), enabled by the owner on 2026-10-06. It is the only
+     script the site loads; the CI "no JavaScript" step allows this one tag and nothing else. -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1f19ba4fc635473c82ac2de4ac0751f2"}'></script>
 </body>
 </html>
