@@ -30,7 +30,7 @@ jobs:
       - name: Build the site
         run: hugo --minify
 
-      - name: Check the site ships no JavaScript
+      - name: Check the site ships no JavaScript beyond the analytics beacon
         shell: python
         run: |
           import pathlib, re, sys
@@ -38,10 +38,12 @@ jobs:
           problems = [str(p) for p in site.rglob("*.js")]
           for page in site.rglob("*.html"):
               html = re.sub(r"<!--.*?-->", "", page.read_text(encoding="utf-8"), flags=re.S)
+              # The one allowed script: the Cloudflare Web Analytics beacon, with exactly this source.
+              html = re.sub(r"<script type=\"?module\"? src=\"?https://static\.cloudflareinsights\.com/beacon\.min\.js\"? data-cf-beacon='\{[^'<>]*\}'></script>", "", html, count=1)
               if re.search(r"<script|\son[a-z]+=", html, re.I):
                   problems.append(str(page))
           if problems:
-              print("JavaScript found (the analytics beacon must stay commented out until launch):")
+              print("JavaScript found beyond the one allowed Cloudflare Web Analytics beacon:")
               print("\n".join(problems))
               sys.exit(1)
           print("No JavaScript in public/.")
