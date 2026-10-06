@@ -1,14 +1,14 @@
 ---
 title: "DOT Studio"
 kicker: "Release 1 · JetBrains plugin"
-status: "1.0.0 · in JetBrains Marketplace review since 2026-10-03"
+status: "1.0.0 · on the JetBrains Marketplace since 2026-10-05"
 lede: "A free JetBrains IDE plugin for Graphviz DOT files, with a live preview that needs no Graphviz installation."
 description: "DOT Studio 1.0.0: a free JetBrains plugin for Graphviz DOT with a live preview. QA verdict, known limitations, launch targets, licence and source."
 ---
 
 ## Status
 
-**Version 1.0.0 was submitted to the JetBrains Marketplace on 2026-10-03 and is in review.** We'll add the store link here when JetBrains approves the listing. Until then you can install the [exact ZIP we submitted](https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0) from the GitHub release, which also gives its SHA-256 checksum. To install it, download the ZIP, then in the IDE choose Settings › Plugins › ⚙ › Install Plugin from Disk… and pick the file.
+**Version 1.0.0 is on the [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/34732-dot-studio).** JetBrains approved the listing on 2026-10-05. To install it, in the IDE choose Settings › Plugins › Marketplace and search for DOT Studio. The Marketplace repackages each upload, so its file has a different checksum from the [1.0.0 ZIP on GitHub](https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0), but the files inside are identical; we checked. You can still install that ZIP instead: download it, then choose Settings › Plugins › ⚙ › Install Plugin from Disk… and pick the file.
 {.note}
 
 ## What it does
@@ -78,7 +78,7 @@ We set these targets before release, so the results can't move them. They count 
 
 ## Results
 
-**Not yet.** The clock starts when JetBrains approves the listing. We'll publish the day-14 and day-30 numbers here, whether we hit the targets or miss them.
+**Not yet.** The clock started on 2026-10-05, when JetBrains approved the listing, so day 14 is 2026-10-19 and day 30 is 2026-11-04. We'll publish the numbers here, whether we hit the targets or miss them.
 
 ## Licence and source
 
