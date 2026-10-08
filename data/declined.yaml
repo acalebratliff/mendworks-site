@@ -116,3 +116,52 @@ entries:
     reason: "Oxidized's maintainers ask contributors to understand, test and stand behind every change. We don't run oxidized ourselves, so we couldn't stand behind fixes the way they ask, and stepped back."
     label: documented
     evidence: "[oxidized's guidance on AI coding agents](https://github.com/ytti/oxidized/blob/master/CONTRIBUTING.md#using-ai-coding-agents)."
+  - order: 19
+    date: "2026-10-06"
+    hunt: 14
+    candidate: "Whole hunt: export paywalls in popular apps"
+    reason: "We looked at 25 paid export features from 24 vendors. Most lock data that lives in the vendor's cloud, where no free local tool can reach it. Two passed our screen, both with little sign of demand, so we closed the hunt."
+    label: documented
+    evidence: "our internal candidate list, with each vendor's own pricing or help page, checked 2026-10-06."
+  - order: 20
+    date: "2026-10-07"
+    hunt: 17
+    candidate: "Eye-gaze pointer control with a laptop webcam"
+    reason: "In our own test, webcam eye gaze was off by 6.9 to 7.6 degrees, too coarse to aim a pointer. Head movement worked well on the same camera, so we turned to a head pointer instead."
+    label: measured
+    evidence: "our on-device test on 2026-10-07, run with the network cut off. The results are in our internal research notes."
+  - order: 21
+    date: "2026-10-07"
+    hunt: 17
+    candidate: "Linux mouse output for opentrack (head tracking)"
+    reason: "In 2022 the maintainer declined mouse output on Linux as not a priority, citing drift and range issues. Nothing since points the other way, so we took that as the answer."
+    label: documented
+    evidence: "[the maintainer's comment on #1560](https://github.com/opentrack/opentrack/issues/1560#issuecomment-1293375453)."
+  - order: 22
+    date: "2026-10-07"
+    hunt: 17
+    candidate: "Taking over eViacam (webcam head mouse)"
+    reason: "eViacam runs on X11 only. Its last release was in 2019 and its last change in 2022. Bringing it to Wayland would mean rewriting how it moves the pointer, with no active maintainer to work with."
+    label: documented
+    evidence: "[the eViacam repository](https://github.com/cmauri/eviacam), checked 2026-10-07."
+  - order: 23
+    date: "2026-10-07"
+    hunt: 18
+    candidate: "Soundscape in the browser (#75)"
+    reason: "A community member already has a working browser version, started in 2024. People without an iPhone can also use the free Soundscape for Android from Scottish Tech Army."
+    label: documented
+    evidence: "[the browser version's announcement on #75](https://github.com/soundscape-community/soundscape/issues/75#issuecomment-1877117914) and [Soundscape for Android](https://github.com/Scottish-Tech-Army/Soundscape-Android)."
+  - order: 24
+    date: "2026-10-07"
+    hunt: 18
+    candidate: "Dwell and switch input for Dasher on the web"
+    reason: "Dasher's web build calls itself a demo and points daily users to the desktop and mobile apps. Those apps are free on every major platform, so there was nothing to free."
+    label: documented
+    evidence: "[the dasher-web README](https://github.com/dasher-project/dasher-web) and [Dasher's downloads page](https://dasher.at/downloads/)."
+  - order: 25
+    date: "2026-10-07"
+    hunt: 18
+    candidate: "A new on-screen keyboard for GNOME on Wayland"
+    reason: "Onboard already fills this need. It shipped five releases in 2026 and added Wayland support, including GNOME."
+    label: measured
+    evidence: "[Onboard's releases](https://github.com/onboard-osk/onboard/releases) and [its Wayland notes](https://github.com/onboard-osk/onboard/blob/main/README.WAYLAND.md)."
