@@ -165,3 +165,24 @@ entries:
     reason: "Onboard already fills this need. It shipped five releases in 2026 and added Wayland support, including GNOME."
     label: measured
     evidence: "[Onboard's releases](https://github.com/onboard-osk/onboard/releases) and [its Wayland notes](https://github.com/onboard-osk/onboard/blob/main/README.WAYLAND.md)."
+  - order: 26
+    date: "2026-10-08"
+    hunt: 26
+    candidate: "A free front end for PhotoRec and TestDisk (data recovery)"
+    reason: "A free GTK4 front end for Linux, koxt2/DataRecovery, released version 0.7.1 on 2026-10-05, and Windows is already served by free tools. Paid tools let you scan for free and charge to save. A free front end now fills most of that gap."
+    label: measured
+    evidence: "[koxt2/DataRecovery](https://github.com/koxt2/DataRecovery) and its releases, checked 2026-10-08; the Windows tools are in our internal research notes."
+  - order: 27
+    date: "2026-10-08"
+    hunt: 27
+    candidate: "UML class diagrams from code (JetBrains plugin)"
+    reason: "Five plugins that do this were released in twelve months, the newest on 2026-10-07. Newcomers in this space reach 7 downloads a day at most, so a new listing would go unseen."
+    label: measured
+    evidence: "JetBrains Marketplace listings and download counts, pulled by our red team on 2026-10-08. We don't link the plugins, so as not to single out their authors."
+  - order: 28
+    date: "2026-10-08"
+    hunt: 31
+    candidate: "A dated record of open-source AI-contribution policies"
+    reason: "Three such records already exist, and we found no sign that anyone had asked for dates or change alerts. We sent ten rows to the existing list in [pull request #88](https://github.com/melissawm/open-source-ai-contribution-policies/pull/88) (open on 2026-10-08)."
+    label: measured
+    evidence: "the public repositories and datasets, read by our red team on 2026-10-08; the existing list is [melissawm/open-source-ai-contribution-policies](https://github.com/melissawm/open-source-ai-contribution-policies)."
