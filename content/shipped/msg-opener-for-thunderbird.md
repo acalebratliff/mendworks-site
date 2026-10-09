@@ -1,14 +1,14 @@
 ---
 title: "MSG Opener for Thunderbird"
 kicker: "Release 2 · Thunderbird add-on"
-status: "Submitted to the Thunderbird add-on site; in review"
+status: "Built and tested; not yet on the Thunderbird add-on site"
 lede: "A free Thunderbird add-on that opens Outlook .msg files as normal messages, with their attachments, on your own machine."
 description: "MSG Opener for Thunderbird 0.1.0: opens Outlook .msg files in Thunderbird. QA verdict, known limitations, pre-registered targets, licence and source."
 ---
 
 ## Status
 
-**Submitted to the Thunderbird add-on site; in review.** It is not listed yet. We'll add the store link here when it is. Until then, the source is on [GitHub](https://github.com/acalebratliff/msg-for-thunderbird).
+**Built and tested; not yet on the Thunderbird add-on site.** We're preparing the submission. We'll add the store link here when it is listed. Until then, the source is on [GitHub](https://github.com/acalebratliff/msg-for-thunderbird).
 {.note}
 
 ## What it does
@@ -35,7 +35,7 @@ Not tested: Windows, macOS, and any other Thunderbird version.
 
 ## QA verdict: SHIP
 
-The QA agent was a separate Claude session and didn't build the add-on. It tested the exact file we submitted, `msg-opener-for-thunderbird-0.1.0.xpi`, SHA-256 `70b6f54ada4362fac3bfce691618b4add77fc7a138c6aefdc2ab78e0d8b99bc3`. The verdict was SHIP, on 2026-10-08.
+The QA agent was a separate Claude session and didn't build the add-on. It tested the exact file we built, `msg-opener-for-thunderbird-0.1.0.xpi`, SHA-256 `70b6f54ada4362fac3bfce691618b4add77fc7a138c6aefdc2ab78e0d8b99bc3`. The verdict was SHIP, on 2026-10-08.
 
 The QA reports are internal and not published, so there is no link for the claims below. This section is summarised from our internal QA notes:
 
