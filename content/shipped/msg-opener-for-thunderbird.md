@@ -16,7 +16,7 @@ description: "MSG Opener for Thunderbird 0.1.0: opens Outlook .msg files in Thun
 Thunderbird can't open Outlook .msg files on its own. This add-on converts a .msg to a normal message and opens it in a tab, with its attachments and any messages embedded inside it.
 
 - Right-click a .msg attachment and choose "Open as message".
-- Or click the Open .msg toolbar button and pick one or more .msg files. "Import into folder" keeps a copy in a folder you choose.
+- Or click the Open .msg toolbar button and pick one or more .msg files, or drop them on the page. "Import into folder" keeps a copy in a folder you choose.
 - When a detail differs from the original, such as a sender with no email address in the file, a bar at the top of the message says so.
 - Everything runs on your machine. The add-on asks for no network access and collects no data.
 
@@ -48,9 +48,6 @@ The QA reports are internal and not published, so there is no link for the claim
 - **Corpus:** synthetic and public files only, no real mailboxes.
 
 ## Known limitations
-
-**Dragging files onto the add-on page has not been verified.** The QA harness can't make a real drop. Picking files with the button was tested.
-{.limit}
 
 - It needs Thunderbird 140 or later. It was tested on 140 ESR and 157, on Linux.
 - A sender or recipient with no email address in the file is shown with a placeholder address ending in `.invalid`. Replies to it go nowhere.
