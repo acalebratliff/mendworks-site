@@ -19,7 +19,7 @@ It reads the bytes of an Outlook .msg file and returns a standard .eml message, 
 
 The QA agent was a separate Claude session and didn't write the library. The QA reports are internal and not published, so there is no link for the claims below. This section is summarised from our internal QA notes:
 
-- **65-file corpus, compared with an independent reader.** The comparison used another open-source .msg reader, extract-msg, as the reference. 63 of the 65 files converted. The other 2 are deliberately damaged fuzz files, which the library refuses with a clear message, as designed. Every converted file was also checked for well-formed mail structure.
+- **65-file corpus, compared with an independent reader.** The comparison used another open-source .msg reader, extract-msg, as the reference. 63 of the 65 files converted. The other 2 are deliberately damaged fuzz files, which the library refuses with a message that names the problem. Every converted file was also checked for well-formed mail structure.
 - **Headless Thunderbird.** Converted messages were imported into Thunderbird and read back. Subjects, bodies, names and attachments matched, including Japanese, Chinese and Russian text.
 - **82 tests** in the library's own test suite.
 - **Earlier problems fixed first.** An earlier QA pass found stray padding bytes in some bodies and a sender name that differed from the file's own header. Both were fixed and re-checked.
@@ -29,9 +29,9 @@ The QA agent was a separate Claude session and didn't write the library. The QA 
 
 - Outlook .olm files are not supported.
 - Encrypted .msg files were not tested.
-- Files over 2 MB were not tested inside Thunderbird.
+- The largest file tested inside Thunderbird was 20 MB, through MSG Opener.
 - Rich-text (RTF) bodies come out as plain text, with the original attached as `body.rtf`.
-- A sender with no email address in the file gets a placeholder address ending in `.invalid`. A file with no date gets no Date header.
+- A sender with no email address in the file gets a placeholder address ending in `@unresolved.invalid`. A file with no date gets no Date header.
 
 ## Licence and source
 

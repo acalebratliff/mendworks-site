@@ -16,8 +16,8 @@ description: "MSG Opener for Thunderbird 0.1.0: opens Outlook .msg files in Thun
 Thunderbird can't open Outlook .msg files on its own. This add-on converts a .msg to a normal message and opens it in a tab, with its attachments and any messages embedded inside it.
 
 - Right-click a .msg attachment and choose "Open as message".
-- Or click the toolbar button and pick one or more .msg files. "Import into folder" keeps a copy in a folder you choose.
-- When something couldn't be carried over, a bar at the top of the message says so. For example, a sender with no email address in the file.
+- Or click the Open .msg toolbar button and pick one or more .msg files. "Import into folder" keeps a copy in a folder you choose.
+- When a detail differs from the original, such as a sender with no email address in the file, a bar at the top of the message says so.
 - Everything runs on your machine. The add-on asks for no network access and collects no data.
 
 It needs Thunderbird 140 or later. The conversion is done by [msg-eml-core](/shipped/msg-eml-core/), our open-source library.
@@ -40,10 +40,10 @@ The QA agent was a separate Claude session and didn't build the add-on. It teste
 The QA reports are internal and not published, so there is no link for the claims below. This section is summarised from our internal QA notes:
 
 - **Corpus:** 65 .msg files, plus three extra test files built to check the warning bar. 63 of the 65 opened. The other 2 are deliberately damaged files, and the add-on refused both with a message that says what is wrong. 0 crashes, hangs or blank tabs. The results were the same on both Thunderbird versions.
-- **Embedded messages:** all nine nested opens, across seven files, worked.
+- **Embedded messages:** messages inside other messages opened in all 9 cases, across 7 files.
 - **Import:** importing a message twice is detected and refused.
 - **Bad input:** a zip and an .eml renamed to .msg, and an empty file, each gave a clear message and no tab.
-- **Size:** a 20 MB file opened in about 3 seconds. A 26 MB file was refused at once, with a message.
+- **Size:** a 20 MB file opened from disk in 2 to 3 seconds. A 26 MB file was refused at once, with a message.
 - **Earlier problem fixed first:** the first QA pass found that the right-click entry could stop appearing after you selected a file that wasn't a .msg. That is fixed, and the second pass checked it in the message tab, in the three-pane view and after a restart.
 - **Corpus:** synthetic and public files only, no real mailboxes.
 
@@ -54,12 +54,12 @@ The QA reports are internal and not published, so there is no link for the claim
 
 - It needs Thunderbird 140 or later. It was tested on 140 ESR and 157, on Linux.
 - A sender or recipient with no email address in the file is shown with a placeholder address ending in `.invalid`. Replies to it go nowhere.
-- A file with no date gets no Date header. Some dates are creation or delivery times, not sent times.
+- A file with no date gets no Date header. Where a file has no sent time, the date shown is when it was delivered or created.
 - Rich-text (RTF) bodies are shown as plain text, with the formatted version attached.
 - Calendar items, contacts, tasks and notes open as ordinary messages.
-- Damaged files are refused, not repaired. Files over 25 MB are refused.
-- Only .msg files work: not .oft, .pst or winmail.dat. Encrypted .msg files were not tested.
-- Opened messages are a view. Use Import to keep one.
+- Damaged files are refused with a message. Files over 25 MB are refused.
+- It opens .msg files only. It does not open .oft templates, .pst files or winmail.dat. Encrypted .msg files were not tested.
+- An opened message is a view of the file. To keep it, use "Import into folder".
 - A large .msg attachment (20 MB) took 7 to 8 seconds to open from the right-click entry, and Thunderbird may pause briefly while it does.
 
 ## Launch targets, set before launch
