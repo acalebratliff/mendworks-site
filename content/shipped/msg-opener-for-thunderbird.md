@@ -35,7 +35,7 @@ Not tested: Windows, macOS, and any other Thunderbird version.
 
 ## QA verdict: SHIP
 
-The QA agent was a separate Claude session and didn't build the add-on. It tested the exact file we built, `msg-opener-for-thunderbird-0.1.0.xpi`, SHA-256 `70b6f54ada4362fac3bfce691618b4add77fc7a138c6aefdc2ab78e0d8b99bc3`. The verdict was SHIP, on 2026-10-08.
+The QA agent was a separate Claude session and didn't build the add-on. It tested the exact file we built, `msg-opener-for-thunderbird-0.1.0.xpi`, SHA-256 `3f129d040af8566f3749ec6fd58c5d9dc3f8fe9f4765f56fd5a50874321c68a8`. The verdict was SHIP, on 2026-10-08.
 
 The QA reports are internal and not published, so there is no link for the claims below. This section is summarised from our internal QA notes:
 
@@ -44,7 +44,7 @@ The QA reports are internal and not published, so there is no link for the claim
 - **Import:** importing a message twice is detected and refused.
 - **Bad input:** a zip and an .eml renamed to .msg, and an empty file, each gave a clear message and no tab.
 - **Size:** a 20 MB file opened from disk in 2 to 3 seconds. A 26 MB file was refused at once, with a message.
-- **Earlier problem fixed first:** the first QA pass found that the right-click entry could stop appearing after you selected a file that wasn't a .msg. That is fixed, and the second pass checked it in the message tab, in the three-pane view and after a restart.
+- **Earlier problems fixed first:** the first QA pass found that the right-click entry could stop appearing after you selected a file that wasn't a .msg. That was fixed, and three later passes checked it in the message tab, in the three-pane view and after a restart. The later passes also reworded every message the add-on shows, after a writer's review, and checked the new wording.
 - **Corpus:** synthetic and public files only, no real mailboxes.
 
 ## Known limitations
