@@ -78,7 +78,7 @@ We set these targets before release, so the results can't move them. They count 
 
 ## Results
 
-**Not yet.** The clock started on 2026-10-05, when JetBrains approved the listing, so day 14 is 2026-10-19 and day 30 is 2026-11-04. We'll publish the numbers here, whether we hit the targets or miss them.
+**Day 14, 2026-10-19: 39 downloads of 1.0.0, no ratings yet.** That is under the 100 line, so we made the listing fix the table promises. The listing had gone live with no screenshots; we added four. Its first sentence, the only text shown in Marketplace search results, now says the plugin is free and open source, runs on IDEs 2025.2 to 2026.2, and bundles the Graphviz engine so there is nothing else to install. Day 30 is 2026-11-04; we'll publish that number here too, whether we hit the targets or miss them.
 
 ## Licence and source
 
