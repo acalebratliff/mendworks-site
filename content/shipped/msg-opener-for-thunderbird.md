@@ -1,14 +1,14 @@
 ---
 title: "MSG Opener for Thunderbird"
 kicker: "Release 2 · Thunderbird add-on"
-status: "Built and tested; not yet on the Thunderbird add-on site"
+status: "0.1.0 · on the Thunderbird add-on site since 2026-10-09; review pending"
 lede: "A free Thunderbird add-on that opens Outlook .msg files as normal messages, with their attachments, on your own machine."
 description: "MSG Opener for Thunderbird 0.1.0: opens Outlook .msg files in Thunderbird. QA verdict, known limitations, pre-registered targets, licence and source."
 ---
 
 ## Status
 
-**Built and tested; not yet on the Thunderbird add-on site.** We're preparing the submission. We'll add the store link here when it is listed. Until then, the source is on [GitHub](https://github.com/acalebratliff/msg-for-thunderbird).
+**Version 0.1.0 is on the [Thunderbird add-on site](https://addons.thunderbird.net/en-US/thunderbird/addon/msg-opener/).** We submitted it on 2026-10-08 and the listing went live on 2026-10-09. The add-on site publishes a listing before its review is finished and marks it with a note that says so; the review is still pending. The file on the listing is the one QA tested: we downloaded it and its checksum matches. The source is on [GitHub](https://github.com/acalebratliff/msg-for-thunderbird).
 {.note}
 
 ## What it does
@@ -61,7 +61,7 @@ The QA reports are internal and not published, so there is no link for the claim
 
 ## Launch targets, set before launch
 
-We set these targets before release, so the results can't move them. They count the add-on's daily users on the Thunderbird add-on site, from the day the listing goes live.
+We set these targets before release, so the results can't move them. They count the add-on's daily users on the Thunderbird add-on site, from 2026-10-09, the day the listing went live.
 
 | Checkpoint | Result | What it means |
 |---|---|---|
@@ -74,7 +74,7 @@ We set these targets before release, so the results can't move them. They count 
 
 ## Results
 
-**Not yet.** The clock starts when the listing goes live. We'll publish the numbers here, whether we hit the targets or miss them.
+**No checkpoint reached yet.** The listing went live on 2026-10-09, so day 30 is 2026-11-08 and day 90 is 2027-01-07. We'll publish the numbers here, whether we hit the targets or miss them.
 
 ## Licence and source
 
