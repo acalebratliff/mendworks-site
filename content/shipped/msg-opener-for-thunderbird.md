@@ -61,7 +61,7 @@ The QA reports are internal and not published, so there is no link for the claim
 
 ## Launch targets, set before launch
 
-We set these targets before release, so the results can't move them. They count the add-on's daily users on the Thunderbird add-on site, from the day the listing goes live.
+We set these targets before release, so the results can't move them. They count the add-on's daily users on the Thunderbird add-on site, from 2026-10-09, the day the listing went live.
 
 | Checkpoint | Result | What it means |
 |---|---|---|
@@ -74,7 +74,7 @@ We set these targets before release, so the results can't move them. They count 
 
 ## Results
 
-**No numbers yet.** The listing went live on 2026-10-09, so day 30 is 2026-11-08 and day 90 is 2027-01-07. We'll publish the numbers here, whether we hit the targets or miss them.
+**No checkpoint reached yet.** The listing went live on 2026-10-09, so day 30 is 2026-11-08 and day 90 is 2027-01-07. We'll publish the numbers here, whether we hit the targets or miss them.
 
 ## Licence and source
 

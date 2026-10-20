@@ -78,7 +78,7 @@ We set these targets before release, so the results can't move them. They count 
 
 ## Results
 
-**Day 14, 2026-10-19: 39 downloads of 1.0.0, no ratings yet.** That is under the 100 line, so we made the listing fix the table promises. The listing had gone live with no screenshots; we added four. Its first sentence, the only text shown in Marketplace search results, now says the plugin is free and open source, runs on IDEs 2025.2 to 2026.2, and bundles the Graphviz engine so there is nothing else to install. Day 30 is 2026-11-04; we'll publish that number here too, whether we hit the targets or miss them.
+**Day 14, 2026-10-19: 39 downloads of 1.0.0, no ratings yet.** That is under 100, so we made the listing fix the table sets. The listing went live with no screenshots, and we added four. We also rewrote its first sentence, which Marketplace search results show. It now reads: “Free, open-source Graphviz DOT editing and live preview for JetBrains IDEs 2025.2 to 2026.2. The Graphviz engine is bundled, so there is nothing else to install.” Day 30 is 2026-11-04. We'll publish that number here too, whether we hit the targets or miss them.
 
 ## Licence and source
 
