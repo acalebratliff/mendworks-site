@@ -1,14 +1,14 @@
 ---
 title: "DOT Studio"
 kicker: "Release 1 · JetBrains plugin"
-status: "1.0.0 · on the JetBrains Marketplace since 2026-10-05"
+status: "1.0.0 · on the JetBrains Marketplace; project stopped at its day-30 target"
 lede: "A free JetBrains IDE plugin for Graphviz DOT files, with a live preview that needs no Graphviz installation."
 description: "DOT Studio 1.0.0: a free JetBrains plugin for Graphviz DOT with a live preview. QA verdict, known limitations, launch targets, licence and source."
 ---
 
 ## Status
 
-**Version 1.0.0 is on the [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/34732-dot-studio).** JetBrains approved the listing on 2026-10-05. To install it, in the IDE choose Settings › Plugins › Marketplace and search for DOT Studio. The Marketplace repackages each upload, so its file has a different checksum from the [1.0.0 ZIP on GitHub](https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0), but the files inside are identical; we checked. You can still install that ZIP instead: download it, then choose Settings › Plugins › ⚙ › Install Plugin from Disk… and pick the file.
+**Version 1.0.0 is on the [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/34732-dot-studio).** JetBrains approved the listing on 2026-10-05. We stopped the project at its day-30 target, as the results below explain, and 1.0.0 stays available. To install it, in the IDE choose Settings › Plugins › Marketplace and search for DOT Studio. The Marketplace repackages each upload, so its file has a different checksum from the [1.0.0 ZIP on GitHub](https://github.com/acalebratliff/dot-studio/releases/tag/v1.0.0), but the files inside are identical; we checked. You can still install that ZIP instead: download it, then choose Settings › Plugins › ⚙ › Install Plugin from Disk… and pick the file.
 {.note}
 
 ## What it does
@@ -78,7 +78,9 @@ We set these targets before release, so the results can't move them. They count 
 
 ## Results
 
-**Day 14, 2026-10-19: 39 downloads of 1.0.0, no ratings yet.** That is under 100, so we made the listing fix the table sets. The listing went live with no screenshots, and we added four. We also rewrote its first sentence, which Marketplace search results show. It now reads: “Free, open-source Graphviz DOT editing and live preview for JetBrains IDEs 2025.2 to 2026.2. The Graphviz engine is bundled, so there is nothing else to install.” Day 30 is 2026-11-04. We'll publish that number here too, whether we hit the targets or miss them.
+**Day 14, 2026-10-19: 39 downloads of 1.0.0, no ratings yet.** That is under 100, so we made the listing fix the table sets. The listing went live with no screenshots, and we added four. We also rewrote its first sentence, which Marketplace search results show. It now reads: “Free, open-source Graphviz DOT editing and live preview for JetBrains IDEs 2025.2 to 2026.2. The Graphviz engine is bundled, so there is nothing else to install.” 
+
+**Day 30, 2026-11-04: 94 downloads of 1.0.0, no ratings.** That is under 300, so we stopped the project, as the table says we would. Version 1.0.0 stays free on the Marketplace and on GitHub. We are not planning another version.
 
 ## Licence and source
 
