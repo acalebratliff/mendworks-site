@@ -8,7 +8,7 @@ description: "MSG Opener for Thunderbird 0.1.0: opens Outlook .msg files in Thun
 
 ## Status
 
-**Version 0.1.0 did not pass review on the [Thunderbird add-on site](https://addons.thunderbird.net/en-US/thunderbird/addon/msg-opener/) and is disabled there.** The review on 2026-11-02 had one finding: the package held a file and a folder whose names differ only in case, `NOTICE` and `notice/`, which collide on Windows and macOS. The reviewer found nothing else. Version 0.1.1 renames the file and goes to the add-on site for review next. The source is on [GitHub](https://github.com/acalebratliff/msg-for-thunderbird).
+**Version 0.1.0 did not pass review on the Thunderbird add-on site and is disabled there.** The review on 2026-11-02 had one finding: the package held a file and a folder whose names differ only in case, `NOTICE` and `notice/`, which collide on Windows and macOS. The reviewer found nothing else. Version 0.1.1 renames the file and goes to the add-on site for review next. The source is on [GitHub](https://github.com/acalebratliff/msg-for-thunderbird).
 {.note}
 
 ## What it does
